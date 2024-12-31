@@ -215,9 +215,15 @@ function openModal(modalId) {
   const captionText = modal.querySelector(`#caption${modalId.slice(-1)}`);
   img.src = document.querySelector(`[onclick="openModal('${modalId}')"] img`).src;
   captionText.innerHTML = document.querySelector(`[onclick="openModal('${modalId}')"] .certi-title h4`).innerHTML + " - " + document.querySelector(`[onclick="openModal('${modalId}')"] .certi-id`).innerHTML + " - " + document.querySelector(`[onclick="openModal('${modalId}')"] .certi-date`).innerHTML;
+  // Tambahkan gaya untuk memastikan modal muncul di tempat pengguna mengklik
+  const clickedElement = document.querySelector(`[onclick="openModal('${modalId}')"]`);
+  const rect = clickedElement.getBoundingClientRect();
+  modal.style.top = `${rect.top + window.scrollY}px`;
+  modal.style.left = `${rect.left + window.scrollX}px`;
 }
 
 function closeModal(modalId) {
   const modal = document.getElementById(modalId);
   modal.style.display = "none";
 }
+
