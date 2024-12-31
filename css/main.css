@@ -1579,6 +1579,7 @@ input[type="text"],
     display: block;
     width: 60%; /* Perkecil gambar sertifikat */
     max-width: 500px; /* Atur lebar maksimum gambar sertifikat */
+    position: relative;
 }
 .modal-caption {
     margin: auto;
@@ -1594,7 +1595,8 @@ input[type="text"],
 .close {
     position: absolute;
     top: 10px;
-    right: 10px; /* Posisikan tombol X di sudut kanan atas modal */
+    left: 50%;
+    transform: translateX(-50%); /* Posisikan tombol X di tengah atas gambar */
     color: #fff;
     font-size: 25px;
     font-weight: bold;
