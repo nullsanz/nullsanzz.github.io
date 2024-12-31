@@ -1577,24 +1577,26 @@ input[type="text"],
 .modal-content {
     margin: auto;
     display: block;
-    width: 80%;
-    max-width: 700px;
+    width: 60%; /* Perkecil gambar sertifikat */
+    max-width: 500px; /* Atur lebar maksimum gambar sertifikat */
 }
 .modal-caption {
     margin: auto;
     display: block;
     width: 80%;
     max-width: 700px;
-    text-align: center;
+    text-align: center; /* Teks berada di bawah gambar */
     color: #ccc;
     padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Tambahkan background untuk teks */
+    border-radius: 10px;
 }
 .close {
     position: absolute;
-    top: 10px; /* Ubah posisi top */
-    right: 10px; /* Ubah posisi right */
+    top: 10px;
+    right: 10px; /* Posisikan tombol X di sudut kanan atas modal */
     color: #fff;
-    font-size: 35px;
+    font-size: 25px;
     font-weight: bold;
 }
 .close:hover,
@@ -1604,9 +1606,7 @@ input[type="text"],
     cursor: pointer;
 }
 .certificate-overlay {
-    background-color: rgba(0,0,0,0.6);
     padding: 20px;
-    border-radius: 10px;
     text-align: center;
 }
 #caption1, #caption2, #caption3, #caption4 {
