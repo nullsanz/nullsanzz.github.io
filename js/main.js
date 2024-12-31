@@ -225,9 +225,17 @@ function openModal(modalId) {
   
   // Pastikan modal muncul tanpa perlu scroll
   modal.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  
+  // Tambahkan event listener untuk menutup modal dengan mengklik overlay
+  modal.addEventListener('click', function(event) {
+    if (event.target === modal) {
+      closeModal(modalId);
+    }
+  });
 }
 
 function closeModal(modalId) {
   const modal = document.getElementById(modalId);
   modal.style.display = "none";
 }
+
