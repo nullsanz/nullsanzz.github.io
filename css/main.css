@@ -1592,21 +1592,6 @@ input[type="text"],
     background-color: rgba(0, 0, 0, 0.6); /* Tambahkan background untuk teks */
     border-radius: 10px;
 }
-.close {
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%); /* Posisikan tombol X di tengah atas gambar */
-    color: #fff;
-    font-size: 25px;
-    font-weight: bold;
-}
-.close:hover,
-.close:focus {
-    color: #999;
-    text-decoration: none;
-    cursor: pointer;
-}
 .certificate-overlay {
     padding: 20px;
     text-align: center;
