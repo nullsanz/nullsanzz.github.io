@@ -1591,8 +1591,8 @@ input[type="text"],
 }
 .close {
     position: absolute;
-    top: 10px;
-    right: 25px;
+    top: 10px; /* Ubah posisi top */
+    right: 10px; /* Ubah posisi right */
     color: #fff;
     font-size: 35px;
     font-weight: bold;
@@ -1607,6 +1607,7 @@ input[type="text"],
     background-color: rgba(0,0,0,0.6);
     padding: 20px;
     border-radius: 10px;
+    text-align: center;
 }
 #caption1, #caption2, #caption3, #caption4 {
   margin: auto;
