@@ -214,10 +214,17 @@ function openModal(modalId) {
   const img = modal.querySelector('.modal-content');
   const captionText = modal.querySelector(`#caption${modalId.slice(-1)}`);
   img.src = document.querySelector(`[onclick="openModal('${modalId}')"] img`).src;
+  
+  // Ambil deskripsi dari elemen yang di-klik
+  const clickedElement = document.querySelector(`[onclick="openModal('${modalId}')"]`);
+  const certiTitle = clickedElement.querySelector('.certi-title h4').innerText;
+  const certiId = clickedElement.querySelector('.certi-id span').innerText;
+  
+  // Atur caption text sesuai deskripsi yang diberikan
+  captionText.innerHTML = `${certiTitle} - ${certiId}`;
+  
   // Pastikan modal muncul tanpa perlu scroll
   modal.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  // Atur caption text sesuai instruksi
-  captionText.innerHTML = "Sertifikat Kompetensi Keahlian - Bagian Depan";
 }
 
 function closeModal(modalId) {
