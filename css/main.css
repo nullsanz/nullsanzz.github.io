@@ -673,15 +673,16 @@ button.mfp-arrow:focus {
 }
 .header .copyrights {
   color: #fff;
-  width: 380px;
-  position: absolute;
+  width: 100%;
+  position: fixed;
   bottom: 0;
   left: 0;
   padding: 5px 10px 15px;
   line-height: 14px;
   font-size: 12px;
-  text-align: center;
+  text-align: left;
   opacity: 0.5;
+  background-color: rgba(0, 0, 0, 0.7); /* Memberi latar belakang semi-transparan */
 }
 .header .info-list {
   color: #fff;
@@ -1521,28 +1522,21 @@ input[type="text"],
 }
 .certificate-item {
   position: relative;
-  display: table;
-  table-layout: fixed;
+  display: flex;
+  align-items: center;
   width: 100%;
   border-radius: 8px;
   margin-bottom: 20px;
-  -webkit-transition: all 2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  -ms-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  -webkit-box-shadow: 0 1px 5px rgb(0 0 0/20%);
-  -moz-box-shadow: 0 1px 5px rgb(0 0 0/20%);
-  -o-box-shadow: 0 1px 5px rgb(0 0 0/20%);
-  box-shadow: 0 1px 5px rgb(0 0 0/20%);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  padding: 10px; /* Menambahkan padding untuk memberikan ruang di sekitar konten */
 }
 .certi-logo {
-  display: table-cell;
+  flex-shrink: 0;
   width: 120px;
-  height: 100%;
+  height: auto; /* Biarkan gambar menyesuaikan tinggi */
   background-color: #333;
-  padding: 25px;
-  vertical-align: middle;
+  padding: 10px;
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
 }
@@ -1551,10 +1545,8 @@ input[type="text"],
   max-width: 100%;
 }
 .certi-content {
-  display: table-cell;
-  width: 100%;
+  flex-grow: 1;
   padding: 20px 25px;
-  vertical-align: middle;
 }
 .certi-title h4 {
   font-size: 16px;
@@ -1569,57 +1561,52 @@ input[type="text"],
   color: #777;
   opacity: 0.7;
 }
-.certificate-item1 {
-  position: relative;
-  bottom: 213px;
-  left: 100%;
-  display: table;
-  table-layout: fixed;
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
   width: 100%;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  -webkit-transition: all 2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  -ms-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  -webkit-box-shadow: 0 1px 5px rgb(0 0 0/20%);
-  -moz-box-shadow: 0 1px 5px rgb(0 0 0/20%);
-  -o-box-shadow: 0 1px 5px rgb(0 0 0/20%);
-  box-shadow: 0 1px 5px rgb(0 0 0/20%);
-}
-.certi-logo1 {
-  display: table-cell;
-  width: 120px;
   height: 100%;
-  background-color: #333;
-  padding: 25px;
-  vertical-align: middle;
-  border-top-left-radius: 6px;
-  border-bottom-left-radius: 6px;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.9);
 }
-.certi-logo1 img {
+.modal-content {
+  margin: auto;
   display: block;
-  max-width: 100%;
+  width: 80%;
+  max-width: 700px;
+  transition: transform 0.3s ease-in-out;
 }
-.certi-content1 {
-  display: table-cell;
-  width: 100%;
-  padding: 20px 25px;
-  vertical-align: middle;
+.modal-content:hover {
+  transform: scale(1.1);
 }
-.certi-title1 h4 {
-  font-size: 16px;
-  margin: 0 0 5px;
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
 }
-.certi-id1 {
-  font-size: 0.9em;
-  color: #777;
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
 }
-.certi-date1 {
-  font-size: 0.7em;
-  color: #777;
-  opacity: 0.7;
+#caption1, #caption2, #caption3, #caption4 {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
 }
 .fun-fact {
   position: relative;
