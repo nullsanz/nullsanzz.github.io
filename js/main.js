@@ -216,6 +216,8 @@ function openModal(modalId) {
   img.src = document.querySelector(`[onclick="openModal('${modalId}')"] img`).src;
   // Pastikan modal muncul tanpa perlu scroll
   modal.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  // Atur caption text sesuai instruksi
+  captionText.innerHTML = "Sertifikat Kompetensi Keahlian - Bagian Depan";
 }
 
 function closeModal(modalId) {
