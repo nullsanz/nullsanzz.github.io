@@ -210,7 +210,7 @@
 // Modal Certificate Zoom Functionality
 function openModal(modalId) {
   const modal = document.getElementById(modalId);
-  modal.style.display = "block";
+  modal.style.display = "flex"; // Menggunakan "flex" agar modal berada di tengah layar
   const img = modal.querySelector('.modal-content');
   const captionText = modal.querySelector(`#caption${modalId.slice(-1)}`);
   img.src = document.querySelector(`[onclick="openModal('${modalId}')"] img`).src;
