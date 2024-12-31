@@ -1,42 +1,43 @@
-!(function (e) {
+// Animasi Sertifikat dan Modal Zoom
+(function($) {
   "use strict";
   function a() {
-    var a = e(".portfolio-grid");
+    var a = $(".portfolio-grid");
     if (a) {
       a.isotope({ layoutMode: "masonry", itemSelector: "figure" });
-      var t = e(".portfolio-filters"),
+      var t = $(".portfolio-filters"),
         o = t.find("a.filter");
-      o.click(function () {
-        var t = e(this);
+      o.click(function() {
+        var t = $(this);
         if (t.parent().hasClass("active")) return !1;
-        o.parent().removeClass("active"), e(this).parent().addClass("active");
-        var i = e(this).attr("data-filter");
+        o.parent().removeClass("active"), $(this).parent().addClass("active");
+        var i = $(this).attr("data-filter");
         return a.isotope({ filter: i }), !1;
       });
     }
   }
   function t() {
-    var a = e(window).width(),
-      t = e("#site_header");
+    var a = $(window).width(),
+      t = $("#site_header");
     1025 > a
       ? (t.addClass("mobile-menu-hide"),
-        e(".menu-toggle").removeClass("open"),
-        setTimeout(function () {
+        $(".menu-toggle").removeClass("open"),
+        setTimeout(function() {
           t.addClass("animate");
         }, 500))
       : t.removeClass("animate");
   }
-  e(function () {
-    e("#contact_form").validator(),
-      e("#contact_form").on("submit", function (a) {
+  $(function() {
+    $("#contact_form").validator(),
+      $("#contact_form").on("submit", function(a) {
         if (!a.isDefaultPrevented()) {
           var t = "contact_form/contact_form.php";
           return (
-            e.ajax({
+            $.ajax({
               type: "POST",
               url: t,
-              data: e(this).serialize(),
-              success: function (a) {
+              data: $(this).serialize(),
+              success: function(a) {
                 var t = "alert-" + a.type,
                   o = a.message,
                   i =
@@ -45,10 +46,7 @@
                     ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' +
                     o +
                     "</div>";
-                t &&
-                  o &&
-                  (e("#contact_form").find(".messages").html(i),
-                  e("#contact_form")[0].reset());
+                t && o && ($("#contact_form").find(".messages").html(i), $("#contact_form")[0].reset());
               },
             }),
             !1
@@ -56,65 +54,64 @@
         }
       });
   }),
-    e(window)
-      .on("load", function () {
-        e(".preloader").fadeOut(800, "linear");
-        var a = e(".animated-sections");
+    $(window)
+      .on("load", function() {
+        $(".preloader").fadeOut(800, "linear");
+        var a = $(".animated-sections");
         a[0] && PageTransitions.init({ menu: "ul.main-menu" });
       })
-      .on("resize", function () {
+      .on("resize", function() {
         t();
       }),
-    e(document).ready(function () {
+    $(document).ready(function() {
       var o = 20,
-        i = o / e(document).height(),
-        n = o / e(document).width();
-      e("body").on("mousemove", function (a) {
-        var t = a.pageX - e(document).width() / 2,
-          o = a.pageY - e(document).height() / 2,
+        i = o / $(document).height(),
+        n = o / $(document).width();
+      $("body").on("mousemove", function(a) {
+        var t = a.pageX - $(document).width() / 2,
+          o = a.pageY - $(document).height() / 2,
           s = n * t * -1,
           m = i * o * -1,
-          c = e(".lm-animated-bg");
+          c = $(".lm-animated-bg");
         c.addClass("transition"),
           c.css({
-            "background-position":
-              "calc( 50% + " + s + "px ) calc( 50% + " + m + "px )",
+            "background-position": "calc( 50% + " + s + "px ) calc( 50% + " + m + "px )",
           }),
-          setTimeout(function () {
+          setTimeout(function() {
             c.removeClass("transition");
           }, 300);
       }),
-        e(".menu-toggle").on("click", function () {
-          e("#site_header").addClass("animate"),
-            e("#site_header").toggleClass("mobile-menu-hide"),
-            e(".menu-toggle").toggleClass("open");
+        $(".menu-toggle").on("click", function() {
+          $("#site_header").addClass("animate"),
+            $("#site_header").toggleClass("mobile-menu-hide"),
+            $(".menu-toggle").toggleClass("open");
         }),
-        e(".main-menu").on("click", "a", function (e) {
+        $(".main-menu").on("click", "a", function(e) {
           t();
         }),
-        e(".sidebar-toggle").on("click", function () {
-          e("#blog-sidebar").toggleClass("open");
+        $(".sidebar-toggle").on("click", function() {
+          $("#blog-sidebar").toggleClass("open");
         });
-      var s = e(".portfolio-grid");
-      s.imagesLoaded(function () {
+      var s = $(".portfolio-grid");
+      s.imagesLoaded(function() {
         a(this);
       });
-      var m = e(".blog-masonry");
+      var m = $(".blog-masonry");
       if (
-        (m.imagesLoaded(function () {
+        (m.imagesLoaded(function() {
           m.isotope({ layoutMode: "masonry", itemSelector: ".item" });
-          var a = e(".blog-filters"),
+          var a = $(".blog-filters"),
             t = a.find("a.filter");
-          t.click(function () {
-            var a = e(this);
+          t.click(function() {
+            var a = $(this);
             if (a.parent().hasClass("active")) return !1;
             t.parent().removeClass("active"),
-              e(this).parent().addClass("active");
-            var o = e(this).attr("data-filter");
+              $(this).parent().addClass("active");
+            var o = $(this).attr("data-filter");
             return m.isotope({ filter: o }), !1;
           });
         }),
-        e(".text-rotation").owlCarousel({
+        $(".text-rotation").owlCarousel({
           loop: !0,
           dots: !1,
           nav: !1,
@@ -126,7 +123,7 @@
           animateOut: "animated-section-scaleDown",
           animateIn: "animated-section-scaleUp",
         }),
-        e(".testimonials.owl-carousel").owlCarousel({
+        $(".testimonials.owl-carousel").owlCarousel({
           nav: !0,
           items: 3,
           loop: !1,
@@ -140,7 +137,7 @@
             1200: { items: 2 },
           },
         }),
-        e(".clients.owl-carousel")
+        $(".clients.owl-carousel")
           .imagesLoaded()
           .owlCarousel({
             nav: !0,
@@ -155,16 +152,16 @@
               1200: { items: 5 },
             },
           }),
-        e(".form-control")
+        $(".form-control")
           .val("")
-          .on("focusin", function () {
-            e(this).parent(".form-group").addClass("form-group-focus");
+          .on("focusin", function() {
+            $(this).parent(".form-group").addClass("form-group-focus");
           })
-          .on("focusout", function () {
-            0 === e(this).val().length &&
-              e(this).parent(".form-group").removeClass("form-group-focus");
+          .on("focusout", function() {
+            0 === $(this).val().length &&
+              $(this).parent(".form-group").removeClass("form-group-focus");
           }),
-        e("body").magnificPopup({
+        $("body").magnificPopup({
           delegate: "a.lightbox",
           type: "image",
           removalDelay: 300,
@@ -189,12 +186,12 @@
             srcAction: "iframe_src",
           },
           callbacks: {
-            markupParse: function (e, a, t) {
-              a.title = t.el.attr("title");
+            markupParse: function(a, t, o) {
+              t.title = o.el.attr("title");
             },
           },
         }),
-        e(".lmpixels-map")[0])
+        $(".lmpixels-map")[0])
       ) {
         var c = "San Francisco, S601 Townsend Street, California, USA",
           c = encodeURIComponent(c),
@@ -202,10 +199,25 @@
             "https://maps.google.com/maps?q=" +
             c +
             "&amp;t=m&amp;z=16&amp;output=embed&amp;iwloc=near&output=embed";
-        e(".lmpixels-map iframe").attr("src", r);
+        $(".lmpixels-map iframe").attr("src", r);
       }
-      e(".messages").on("click", ".close", function () {
-        e(this).parent().remove();
+      $(".messages").on("click", ".close", function() {
+        $(this).parent().remove();
       });
     });
 })(jQuery);
+
+// Modal Certificate Zoom Functionality
+function openModal(modalId) {
+  const modal = document.getElementById(modalId);
+  modal.style.display = "block";
+  const img = modal.querySelector('.modal-content');
+  const captionText = modal.querySelector(`#caption${modalId.slice(-1)}`);
+  img.src = document.querySelector(`[onclick="openModal('${modalId}')"] img`).src;
+  captionText.innerHTML = document.querySelector(`[onclick="openModal('${modalId}')"] .certi-title h4`).innerHTML + " - " + document.querySelector(`[onclick="openModal('${modalId}')"] .certi-id`).innerHTML + " - " + document.querySelector(`[onclick="openModal('${modalId}')"] .certi-date`).innerHTML;
+}
+
+function closeModal(modalId) {
+  const modal = document.getElementById(modalId);
+  modal.style.display = "none";
+}
