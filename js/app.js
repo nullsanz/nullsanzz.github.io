@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initLightbox();
   initTerminal();
   initMetricsCounter();
+  initFloatingNav();
 });
 
 /* 1. Navigation */
@@ -554,4 +555,25 @@ function initMetricsCounter() {
       count();
     }
   });
+}
+
+/* 9. Floating Action Dock (Back to Top & Quick WA) */
+function initFloatingNav() {
+  const floatingNav = document.getElementById('nbFloatingNav');
+  const backToTopBtn = document.getElementById('backToTopBtn');
+  if (!floatingNav) return;
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 280) {
+      floatingNav.classList.add('visible');
+    } else {
+      floatingNav.classList.remove('visible');
+    }
+  }, { passive: true });
+
+  if (backToTopBtn) {
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
 }

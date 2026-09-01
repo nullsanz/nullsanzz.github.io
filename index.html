@@ -65,19 +65,25 @@
       <button id="menuBurgerBtn" class="menu-burger-btn lg:hidden flex" aria-label="Menu">☰</button>
     </div>
 
-    <!-- Mobile Drawer -->
-    <div id="mobileDrawer" class="mobile-drawer hidden flex-col gap-3 bg-[#FFE66D] border-t-[3px] border-black p-5 mt-3">
-      <a href="#about" class="nb-btn nb-btn-white text-left">📌 TENTANG SAYA</a>
-      <a href="#process" class="nb-btn nb-btn-white text-left">⚙️ PROSES KERJA</a>
-      <a href="#skills" class="nb-btn nb-btn-white text-left">💻 MATRIKS KEAHLIAN</a>
-      <a href="#projects" class="nb-btn nb-btn-white text-left">🚀 SOFTWARE SHOWCASE (8+)</a>
-      <a href="#multimedia" class="nb-btn nb-btn-white text-left">🎬 MULTIMEDIA & VIDEO (43)</a>
-      <a href="#certificates" class="nb-btn nb-btn-white text-left">📜 SERTIFIKASI & PENGALAMAN</a>
-      <a href="#terminal" class="nb-btn nb-btn-white text-left">⚡ INTERACTIVE TERMINAL</a>
-      <a href="#contact" class="nb-btn nb-btn-pink text-left">📬 HUBUNGI KONTAK RESMI</a>
-      <div class="flex gap-2 pt-2">
-        <a href="https://drive.google.com/file/d/17XVc3APcLqBIikroOj8fSLbPgQH3HmnY/view?usp=drive_link" target="_blank" class="nb-btn nb-btn-cyan flex-1">📄 UNDUH CV</a>
-        <a href="https://wa.me/6285718532060" target="_blank" class="nb-btn nb-btn-pink flex-1">💬 CHAT WA</a>
+    <!-- Mobile Drawer (Fast Section Jump Hub) -->
+    <div id="mobileDrawer" class="mobile-drawer hidden flex-col gap-2.5 bg-[#FFE66D] border-t-[3.5px] border-black p-4 mt-2 shadow-[0_6px_0_0_#000]">
+      <div class="font-mono text-xs font-black uppercase text-black pb-1 border-b-2 border-black flex items-center justify-between">
+        <span>⚡ NAVIGASI CEPAT:</span>
+        <span class="bg-black text-[#FFE66D] px-1.5 py-0.5 text-[10px]">NULLSANZ 2026</span>
+      </div>
+      <div class="grid grid-cols-2 gap-2 mt-1">
+        <a href="#about" class="nb-btn nb-btn-white text-xs font-black py-2.5 px-2 text-center justify-center">📌 TENTANG</a>
+        <a href="#process" class="nb-btn nb-btn-white text-xs font-black py-2.5 px-2 text-center justify-center">⚙️ PROSES</a>
+        <a href="#skills" class="nb-btn nb-btn-white text-xs font-black py-2.5 px-2 text-center justify-center">💻 KEAHLIAN</a>
+        <a href="#projects" class="nb-btn nb-btn-white text-xs font-black py-2.5 px-2 text-center justify-center">🚀 SOFTWARE (8+)</a>
+        <a href="#multimedia" class="nb-btn nb-btn-white text-xs font-black py-2.5 px-2 text-center justify-center">🎬 MEDIA (43)</a>
+        <a href="#certificates" class="nb-btn nb-btn-white text-xs font-black py-2.5 px-2 text-center justify-center">📜 SERTIFIKAT</a>
+        <a href="#terminal" class="nb-btn nb-btn-white text-xs font-black py-2.5 px-2 text-center justify-center">⚡ TERMINAL</a>
+        <a href="#contact" class="nb-btn nb-btn-pink text-xs font-black py-2.5 px-2 text-center justify-center text-white">📬 KONTAK</a>
+      </div>
+      <div class="flex gap-2 pt-2 border-t-2 border-black mt-1">
+        <a href="https://drive.google.com/file/d/17XVc3APcLqBIikroOj8fSLbPgQH3HmnY/view?usp=drive_link" target="_blank" class="nb-btn nb-btn-cyan flex-1 text-center justify-center text-xs font-black py-2.5">📄 UNDUH CV</a>
+        <a href="https://wa.me/6285718532060" target="_blank" class="nb-btn nb-btn-pink flex-1 text-center justify-center text-xs font-black py-2.5 text-white">💬 CHAT WA</a>
       </div>
     </div>
   </nav>
@@ -1665,6 +1671,20 @@
       </div>
       <div class="nb-lightbox-cap" id="nbLightboxCap">Judul Karya</div>
     </div>
+  </div>
+
+  <!-- ==========================================================================
+       FLOATING QUICK NAVIGATION & BACK TO TOP (FAB)
+       ========================================================================== -->
+  <div id="nbFloatingNav" class="nb-floating-dock">
+    <a href="https://wa.me/6285718532060" target="_blank" class="nb-floating-btn nb-floating-wa" title="Chat WhatsApp Resmi" aria-label="WhatsApp">
+      <span>💬</span>
+      <span class="nb-floating-text">CHAT WA</span>
+    </a>
+    <button id="backToTopBtn" class="nb-floating-btn nb-floating-top" title="Kembali ke Atas" aria-label="Back to Top">
+      <span>▲</span>
+      <span class="nb-floating-text">TOP</span>
+    </button>
   </div>
 
   <!-- Scripts -->

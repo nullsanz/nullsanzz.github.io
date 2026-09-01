@@ -52,14 +52,14 @@ html {
   -webkit-font-smoothing: antialiased;
   width: 100%;
   max-width: 100vw;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body {
   min-height: 100vh;
   width: 100%;
   max-width: 100vw;
-  overflow-x: hidden;
+  overflow-x: clip;
   position: relative;
   background-color: var(--nb-bg);
   color: var(--nb-black);
@@ -86,6 +86,11 @@ body {
   .container {
     padding: 0 24px;
   }
+}
+
+/* Smooth Scroll Offset for Sticky Header */
+section[id], header[id], div[id] {
+  scroll-margin-top: 76px;
 }
 
 /* Typography */
@@ -191,15 +196,20 @@ a {
 /* ==========================================================================
    NAVIGATION
    ========================================================================== */
+/* ==========================================================================
+   NAVIGATION & STICKY HEADER
+   ========================================================================== */
 .nb-navbar {
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 1000;
   background: var(--nb-yellow);
   border-bottom: var(--nb-border-thick);
-  padding: 12px 0;
+  box-shadow: 0 4px 0 0 #000000;
+  padding: 10px 0;
 }
 
 .nav-flex {
@@ -221,6 +231,7 @@ a {
   border: var(--nb-border);
   box-shadow: var(--nb-shadow-sm);
   transform: rotate(-1.5deg);
+  text-decoration: none;
 }
 
 .nav-menu {
@@ -238,6 +249,8 @@ a {
   padding: 6px 10px;
   border: 2px solid transparent;
   transition: var(--transition-snappy);
+  text-decoration: none;
+  color: #000000;
 }
 
 .nav-item-link:hover {
@@ -251,26 +264,87 @@ a {
   background: var(--nb-white);
   border: var(--nb-border);
   box-shadow: var(--nb-shadow-sm);
-  width: 42px;
-  height: 42px;
-  font-size: 1.25rem;
+  width: 44px;
+  height: 44px;
+  font-size: 1.35rem;
   font-weight: 900;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: var(--transition-snappy);
+  user-select: none;
+}
+
+.menu-burger-btn:hover {
+  background: var(--nb-pink);
+  transform: translate(-1.5px, -1.5px);
+  box-shadow: 4px 4px 0px 0px #000000;
 }
 
 .mobile-drawer {
-  display: none;
-  flex-direction: column;
-  gap: 12px;
-  background: var(--nb-yellow);
-  border-top: var(--nb-border);
-  padding: 20px;
+  width: 100%;
 }
 
-.mobile-drawer.open {
+/* Floating Action Dock (FAB) */
+.nb-floating-dock {
+  position: fixed;
+  bottom: 24px;
+  right: 20px;
+  z-index: 900;
   display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+}
+
+.nb-floating-dock.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.nb-floating-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  border: var(--nb-border-thick);
+  box-shadow: 4px 4px 0px 0px #000000;
+  font-family: var(--font-mono);
+  font-size: 0.825rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: var(--transition-snappy);
+  text-decoration: none;
+  color: #000000;
+}
+
+.nb-floating-wa {
+  background: var(--nb-pink);
+  color: #FFFFFF !important;
+}
+
+.nb-floating-wa:hover {
+  background: var(--nb-yellow);
+  color: #000000 !important;
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px 0px #000000;
+}
+
+.nb-floating-top {
+  background: var(--nb-yellow);
+  color: #000000;
+}
+
+.nb-floating-top:hover {
+  background: var(--nb-teal);
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px 0px #000000;
 }
 
 /* ==========================================================================
@@ -1486,6 +1560,23 @@ a {
   .menu-burger-btn {
     display: flex;
   }
+  .filter-button-bar, .nb-cat-subfilter-bar {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+    gap: 8px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .filter-button-bar::-webkit-scrollbar, .nb-cat-subfilter-bar::-webkit-scrollbar {
+    display: none;
+  }
+  .filter-button-bar .nb-btn, .nb-cat-subfilter-bar .nb-btn {
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+  }
   .tab-system-box {
     flex-direction: column;
   }
@@ -1493,16 +1584,33 @@ a {
     width: 100%;
     border-right: none;
     border-bottom: var(--nb-border-thick);
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .tab-nav-col::-webkit-scrollbar {
+    display: none;
+  }
+  .tab-nav-btn {
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding: 12px 14px;
+    font-size: 0.8rem;
+    border-bottom: none;
+    border-right: 2px solid #000000;
   }
   .tab-pane-content {
     width: 100%;
-    padding: 20px;
+    padding: 20px 16px;
   }
   .skills-matrix-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
   .projects-masonry {
     grid-template-columns: 1fr;
+    gap: 18px;
   }
   .media-pillar-grid {
     grid-template-columns: 1fr;
@@ -1510,6 +1618,7 @@ a {
   }
   .cert-brutal-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
   .nb-cat-overlay-dialog {
     max-height: 96vh;
@@ -1528,13 +1637,13 @@ a {
 
 @media (max-width: 640px) {
   .hero-wrapper {
-    padding: 28px 0 20px 0;
+    padding: 24px 0 18px 0;
   }
   .nb-section {
-    padding: 40px 0;
+    padding: 36px 0;
   }
   .section-head {
-    margin-bottom: 28px;
+    margin-bottom: 24px;
   }
   .hero-button-row {
     flex-direction: column;
@@ -1546,7 +1655,6 @@ a {
     justify-content: center;
   }
   .nb-btn {
-    white-space: normal;
     text-align: center;
     padding: 10px 14px;
     font-size: 0.85rem;
@@ -1556,16 +1664,8 @@ a {
     transform: translate(-1.5px, -1.5px);
     box-shadow: 4px 4px 0px 0px #000000;
   }
-  .filter-button-bar {
-    gap: 6px;
-    margin-bottom: 24px;
-  }
-  .filter-button-bar .nb-btn {
-    padding: 6px 10px;
-    font-size: 0.75rem;
-  }
   .hero-avatar-box {
-    max-width: 260px;
+    max-width: 250px;
     padding: 10px;
   }
   .avatar-sticker-1 {
@@ -1588,10 +1688,19 @@ a {
     padding: 10px 6px;
   }
   .metric-val {
-    font-size: 1.5rem;
+    font-size: 1.45rem;
   }
   .metric-lbl {
     font-size: 0.68rem;
+  }
+  .project-box {
+    padding: 18px 14px;
+  }
+  .project-title-text {
+    font-size: 1.15rem;
+  }
+  .project-desc-text {
+    font-size: 0.86rem;
   }
   .cert-brutal-card {
     grid-template-columns: 1fr;
