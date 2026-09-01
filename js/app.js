@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTyping();
   initProcessTabs();
   initProjectFilters();
-  initMediaFilters();
+  initCategoryOverlay();
   initLightbox();
   initTerminal();
   initMetricsCounter();
@@ -131,31 +131,160 @@ function initProjectFilters() {
   });
 }
 
-/* 5. Multimedia Filters (Pinterest Masonry Friendly) */
-function initMediaFilters() {
-  const filterBtns = document.querySelectorAll('.media-filter-btn');
-  const mediaItems = document.querySelectorAll('.media-gallery-item');
+/* 5. Category Sub-Page / Overlay Modal */
+function initCategoryOverlay() {
+  const overlay = document.getElementById('categoryOverlayModal');
+  const closeBtn = document.getElementById('closeCategoryOverlayBtn');
+  const badgeEl = document.getElementById('catOverlayBadge');
+  const titleEl = document.getElementById('catOverlayTitle');
+  const descEl = document.getElementById('catOverlayDesc');
+  const subfiltersEl = document.getElementById('catSubfilters');
 
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach(b => {
-        b.classList.remove('nb-btn-pink', 'active');
-        b.classList.add('nb-btn-white');
-      });
-      btn.classList.add('nb-btn-pink', 'active');
-      btn.classList.remove('nb-btn-white');
+  if (!overlay) return;
 
-      const filterVal = btn.getAttribute('data-filter');
+  const categoryConfigs = {
+    video: {
+      title: '🎬 Galeri Videografi & Reels',
+      badge: '16 KARYA',
+      badgeClass: 'nb-badge-pink',
+      desc: '2 Film Pendek YouTube HD, 14 Video Vertikal Shorts & Reels Instagram.',
+      groupId: 'catGroup-video',
+      subfilters: [
+        { label: 'SEMUA (16)', filter: 'all' },
+        { label: 'YOUTUBE HD (2)', filter: 'landscape' },
+        { label: 'VERTICAL SHORTS (14)', filter: 'portrait' }
+      ]
+    },
+    design: {
+      title: '🎨 Galeri Desain Grafis & Branding',
+      badge: '15 KARYA',
+      badgeClass: 'nb-badge-yellow',
+      desc: '9 Banner Promosi Komersial, 6 Desain Name Tag Identitas & Kalender Dinding Presisi Cetak.',
+      groupId: 'catGroup-design',
+      subfilters: [
+        { label: 'SEMUA (15)', filter: 'all' },
+        { label: 'DESAIN BANNER (9)', filter: 'banner' },
+        { label: 'NAME TAG & KALENDER (6)', filter: 'branding' }
+      ]
+    },
+    photo: {
+      title: '📷 Galeri Fotografi & Retouching',
+      badge: '12 KARYA',
+      badgeClass: 'nb-badge-teal',
+      desc: '12 Fotografi Profesional: Seni Tari Tradisional Jaipong, Wisuda, Model Fashion & HDR Retouching.',
+      groupId: 'catGroup-photo',
+      subfilters: [
+        { label: 'SEMUA KARYA (12)', filter: 'all' }
+      ]
+    }
+  };
 
-      mediaItems.forEach(item => {
-        const cat = item.getAttribute('data-category');
-        if (filterVal === 'all' || cat === filterVal) {
-          item.style.display = 'block';
-        } else {
-          item.style.display = 'none';
-        }
-      });
+  function openCategory(catId) {
+    const config = categoryConfigs[catId];
+    if (!config) return;
+
+    // Set Header
+    if (titleEl) titleEl.textContent = config.title;
+    if (badgeEl) {
+      badgeEl.textContent = config.badge;
+      badgeEl.className = 'nb-badge ' + config.badgeClass;
+    }
+    if (descEl) descEl.textContent = config.desc;
+
+    // Render Subfilters
+    if (subfiltersEl) {
+      subfiltersEl.innerHTML = '';
+      if (config.subfilters && config.subfilters.length > 1) {
+        config.subfilters.forEach((sub, idx) => {
+          const btn = document.createElement('button');
+          btn.className = 'nb-cat-subfilter-btn' + (idx === 0 ? ' active' : '');
+          btn.textContent = sub.label;
+          btn.setAttribute('data-subfilter', sub.filter);
+
+          btn.addEventListener('click', () => {
+            subfiltersEl.querySelectorAll('.nb-cat-subfilter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            applySubfilter(config.groupId, sub.filter);
+          });
+
+          subfiltersEl.appendChild(btn);
+        });
+      }
+    }
+
+    // Toggle Content Groups
+    document.querySelectorAll('.nb-cat-content-group').forEach(grp => {
+      grp.classList.remove('active');
+      // Reset items visibility
+      grp.querySelectorAll('.media-gallery-item').forEach(item => item.style.display = 'block');
     });
+
+    const activeGroup = document.getElementById(config.groupId);
+    if (activeGroup) activeGroup.classList.add('active');
+
+    // Show Overlay
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+
+    // Reset scroll to top
+    const overlayBody = document.getElementById('catOverlayBody');
+    if (overlayBody) overlayBody.scrollTop = 0;
+  }
+
+  function applySubfilter(groupId, filterVal) {
+    const activeGroup = document.getElementById(groupId);
+    if (!activeGroup) return;
+
+    const items = activeGroup.querySelectorAll('.media-gallery-item');
+    items.forEach(item => {
+      if (filterVal === 'all') {
+        item.style.display = 'block';
+      } else if (filterVal === 'landscape') {
+        item.style.display = item.classList.contains('video-item-box-landscape') ? 'block' : 'none';
+      } else if (filterVal === 'portrait') {
+        item.style.display = item.classList.contains('video-item-box-portrait') ? 'block' : 'none';
+      } else {
+        const cat = item.getAttribute('data-category');
+        item.style.display = (cat === filterVal) ? 'block' : 'none';
+      }
+    });
+  }
+
+  function closeCategory() {
+    overlay.classList.remove('active');
+    // Check if Lightbox is not active before restoring scroll
+    const lightbox = document.getElementById('nbLightbox');
+    if (!lightbox || !lightbox.classList.contains('active')) {
+      document.body.style.overflow = '';
+    }
+  }
+
+  // Trigger buttons in 3 Pillar Cards
+  document.addEventListener('click', (e) => {
+    const trigger = e.target.closest('.open-cat-btn');
+    if (trigger) {
+      const catId = trigger.getAttribute('data-cat-id');
+      if (catId) openCategory(catId);
+    }
+  });
+
+  if (closeBtn) closeBtn.addEventListener('click', closeCategory);
+
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) {
+      closeCategory();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      const lightbox = document.getElementById('nbLightbox');
+      if (!lightbox || !lightbox.classList.contains('active')) {
+        if (overlay.classList.contains('active')) {
+          closeCategory();
+        }
+      }
+    }
   });
 }
 
@@ -215,7 +344,10 @@ function initLightbox() {
   function closeLightbox() {
     if (lightbox) {
       lightbox.classList.remove('active');
-      document.body.style.overflow = '';
+      const catOverlay = document.getElementById('categoryOverlayModal');
+      if (!catOverlay || !catOverlay.classList.contains('active')) {
+        document.body.style.overflow = '';
+      }
       if (lbImg) lbImg.src = '';
     }
   }
@@ -275,8 +407,8 @@ function initTerminal() {
   - <span style="color:#FFE66D">about</span>    : Ringkasan profil Lukmanul Hakim
   - <span style="color:#FFE66D">skills</span>   : Matriks keahlian & stack teknologi
   - <span style="color:#FFE66D">projects</span> : Ekosistem 8 software & bot WhatsApp unggulan
-  - <span style="color:#FFE66D">media</span>    : Koleksi 43 karya multimedia & video (Pinterest layout)
-  - <span style="color:#FFE66D">vps</span>      : Status server VPS 103.169.207.132
+  - <span style="color:#FFE66D">media</span>    : Koleksi 43 karya multimedia & video
+  - <span style="color:#FFE66D">vps</span>      : Status server cloud Linux VPS (PM2 Cluster)
   - <span style="color:#FFE66D">contact</span>  : Hubungi langsung via WhatsApp / Email
   - <span style="color:#FFE66D">clear</span>    : Bersihkan layar terminal`,
 
@@ -306,10 +438,11 @@ function initTerminal() {
 • 6 Desain Name Tag & Kalender
 • 12 Fotografi Studio & Outdoor Portrait`,
 
-    vps: `🖥️ <b>Linux VPS Infrastructure:</b>
-• Host: 103.169.207.132 (Ubuntu Server)
+    vps: `🖥️ <b>Linux Cloud VPS Infrastructure:</b>
+• Node: Enterprise Ubuntu Server (Singapore Region)
 • PM2 Services: bot-loker-bray (ID 0), bot-saluran (ID 1), bot-status-wa (ID 5)
-• Status: 🟢 Online 24/7 (Zero Memory Leak)`,
+• Security: Firewalled & Protected Gateway
+• Status: 🟢 Online 24/7 (Zero Memory Leak, Auto-Restart)`,
 
     contact: `📬 <b>Kontak Resmi:</b>
 • WhatsApp : <a href="https://wa.me/6285718532060" target="_blank" style="color:#6EE7B7">+62 857-1853-2060</a>
