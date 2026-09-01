@@ -1044,39 +1044,116 @@ a {
   letter-spacing: 0.5px;
 }
 
-/* Video Frame (Landscape 16:9 & Portrait 9:16 in Masonry) */
+/* Video Facades & Frames (Zero Initial Iframes, Ultra Fast & Zero Errors) */
 .video-item-box-landscape {
   width: 100%;
 }
 
-.video-frame-169 {
+.video-facade-wrap {
   width: 100%;
-  aspect-ratio: 16 / 9;
-  border-bottom: var(--nb-border-thick);
-  background: #000000;
   position: relative;
+  overflow: hidden;
+  border-bottom: var(--nb-border-thick);
+  cursor: pointer;
+  background: #000000;
 }
 
-.video-frame-169 iframe {
+.video-facade-landscape {
+  aspect-ratio: 16 / 9;
+}
+
+.video-facade-thumb {
   width: 100%;
   height: 100%;
-  border: none;
+  object-fit: cover;
   display: block;
+  transition: transform 0.3s ease;
+}
+
+.video-facade-wrap:hover .video-facade-thumb {
+  transform: scale(1.04);
+}
+
+.video-play-btn-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.video-facade-wrap:hover .video-play-btn-overlay {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.video-play-badge {
+  background: var(--nb-yellow);
+  color: #000000;
+  border: var(--nb-border);
+  box-shadow: var(--nb-shadow-md);
+  padding: 8px 16px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  transform: rotate(-1deg);
+  transition: var(--transition-snappy);
+}
+
+.video-facade-wrap:hover .video-play-badge {
+  transform: rotate(0deg) scale(1.06);
+  background: var(--nb-pink);
 }
 
 .video-item-box-portrait {
   width: 100%;
 }
 
-.video-frame-916 {
-  width: 100%;
-  height: 480px;
-  border-bottom: var(--nb-border-thick);
-  background: #000000;
+.video-facade-portrait {
+  height: 380px;
   position: relative;
 }
 
-.video-frame-916 iframe {
+.video-portrait-poster {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 16px;
+  background-image: radial-gradient(#000000 1.5px, transparent 1.5px);
+  background-size: 16px 16px;
+  transition: filter 0.2s ease;
+}
+
+.video-facade-portrait:hover .video-portrait-poster {
+  filter: brightness(1.05);
+}
+
+.poster-badge-top {
+  background: #000000;
+  color: #FFFFFF;
+  padding: 4px 10px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 900;
+  border: 1.5px solid #000000;
+}
+
+.poster-center-icon {
+  font-size: 3.5rem;
+  line-height: 1;
+  filter: drop-shadow(4px 4px 0px #000000);
+}
+
+.video-facade-wrap.video-active {
+  cursor: default;
+}
+
+.video-facade-wrap.video-active iframe {
   width: 100%;
   height: 100%;
   border: none;

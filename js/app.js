@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initProcessTabs();
   initProjectFilters();
   initCategoryOverlay();
+  initVideoFacades();
   initLightbox();
   initTerminal();
   initMetricsCounter();
@@ -297,7 +298,31 @@ function initCategoryOverlay() {
   });
 }
 
-/* 6. Lightbox Modal (Ultra Responsive + Prev/Next + Keyboard) */
+/* 6. Lazy Video Facades (Zero Initial Iframes, Ultra Fast & Zero Errors) */
+function initVideoFacades() {
+  const facades = document.querySelectorAll('.video-facade-wrap');
+  facades.forEach(facade => {
+    facade.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (facade.classList.contains('video-active')) return;
+
+      const videoUrl = facade.getAttribute('data-video-url');
+      if (!videoUrl) return;
+
+      facade.innerHTML = `
+        <iframe 
+          src="${videoUrl}" 
+          style="width: 100%; height: 100%; border: none; display: block;" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      `;
+      facade.classList.add('video-active');
+    });
+  });
+}
+
+/* 7. Lightbox Modal (Ultra Responsive + Prev/Next + Keyboard) */
 function initLightbox() {
   const lightbox = document.getElementById('nbLightbox');
   const lbImg = document.getElementById('nbLightboxImg');
@@ -423,16 +448,16 @@ function initTerminal() {
 
     about: `👤 <b>Lukmanul Hakim (Nullsanz)</b>
 • Fullstack Developer & AI Systems Engineer berbasis di Karawang.
-• Spesialis Baileys WebSocket, Google Gemini AI, Video Pipeline FFmpeg 60fps & Modern Web.`,
+• Spesialis Baileys WebSocket, Google GenAI (Gemini 3.5 Flash), Video Pipeline FFmpeg 60fps & Modern Web.`,
 
     skills: `⚡ <b>Technical Stack:</b>
 • Frontend : React, Vite, Next.js, TailwindCSS, HTML5/CSS3, pdf-lib.
 • Backend  : Node.js, Express, Baileys, Puppeteer, FFmpeg Ultra HD.
 • Cloud/DB : Linux VPS (PM2), Firebase RTDB, Vercel, Cloudinary CDN.
-• AI/Intel : Google Gemini 1.5 Pro, Truecaller + GetContact Scraping.`,
+• AI/Intel : Google GenAI (Gemini 3.5 Flash), Truecaller + GetContact Scraping.`,
 
     projects: `🚀 <b>8 Unggulan Production Projects:</b>
-1. [Bot WA & Saluran] Loker Bray v2.0 (Gemini AI + Dual Phone Intelligence + Saluran Forwarder)
+1. [Bot WA & Saluran] Loker Bray v2.0 (Google GenAI Gemini 3.5 + Dual Phone Intelligence + Saluran Forwarder)
 2. [Platform] Shortlink Studio link.anull.cloud (Custom Slug & Cute Redirect)
 3. [SaaS] CV Builder ATS-Friendly (14 Templates + AI Auto-Fill)
 4. [App] Anull Streaming Smart TV (Expo TV APK & D-Pad Remote)
