@@ -1,1066 +1,1037 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="id">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-    <title>Lukmanul Hakim Web</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="Portofolio Lukmanul Hakim" />
-    <meta name="keywords" content="Portofolio Nullsanzz" />
-    <meta name="author" content="Nullsanzz" />
-    <link rel="shortcut icon" href="iconh.ico">
-    <link rel="stylesheet" href="css/reset.css" type="text/css">
-    <link rel="stylesheet" href="css/bootstrap-grid.min.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
-    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="css/main.css" type="text/css">
-    <link rel="stylesheet" href="css/animations.css" type="text/css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  
+  <!-- Primary Meta Tags -->
+  <title>Lukmanul Hakim (Nullsanz) • Fullstack Developer & AI Systems Engineer</title>
+  <meta name="title" content="Lukmanul Hakim (Nullsanz) • Fullstack Developer & AI Systems Engineer" />
+  <meta name="description" content="Portofolio resmi Lukmanul Hakim (Nullsanz) — Fullstack Web Developer, AI Systems Engineer, Arsitek Bot WhatsApp Baileys, dan Multimedia Specialist berbasis di Karawang, Indonesia." />
+  <meta name="keywords" content="Lukmanul Hakim, Nullsanz, Fullstack Developer, AI Engineer, WhatsApp Bot, Baileys, Google Gemini, Web Developer Karawang, Portfolio Lukman" />
+  <meta name="author" content="Lukmanul Hakim" />
+  
+  <!-- Open Graph / Facebook / WhatsApp -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://nullsanzz.github.io/" />
+  <meta property="og:title" content="Lukmanul Hakim (Nullsanz) • Fullstack Developer & AI Systems Engineer" />
+  <meta property="og:description" content="Eksplorasi ekosistem software, bot otomatisasi WhatsApp, platform web modern, dan portofolio multimedia Lukmanul Hakim." />
+  <meta property="og:image" content="https://res.cloudinary.com/s6fg76lj/image/upload/f_auto,q_auto/nullsanz-portfolio/avatar/lukman1" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:title" content="Lukmanul Hakim (Nullsanz) • Fullstack Developer" />
+  <meta property="twitter:description" content="Portofolio resmi Lukmanul Hakim — Fullstack Developer & AI Systems Engineer." />
+  <meta property="twitter:image" content="https://res.cloudinary.com/s6fg76lj/image/upload/f_auto,q_auto/nullsanz-portfolio/avatar/lukman1" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="iconh.ico" />
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Fira Code -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
-    <!-- Animated Background -->
-    <div class="lm-animated-bg" style="background-image: url(img/main_bg_3.jpg);"></div>
-    <!-- /Animated Background -->
 
-    <!-- Loading animation -->
-    <div class="preloader">
-      <div class="preloader-animation">
-        <div class="dot dot-1"></div>
-        <div class="dot dot-2"></div>
-        <div class="dot dot-3"></div>
+  <!-- ==========================================================================
+       SITE HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="#" class="brand-logo">
+        <div class="logo-icon">&lt;/&gt;</div>
+        <span>NULLSANZ</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link">Tentang</a></li>
+        <li><a href="#skills" class="nav-link">Keahlian</a></li>
+        <li><a href="#projects" class="nav-link">Ekosistem Software</a></li>
+        <li><a href="#creative" class="nav-link">Multimedia</a></li>
+        <li><a href="#certificates" class="nav-link">Sertifikat</a></li>
+        <li><a href="#terminal" class="nav-link">Terminal</a></li>
+        <li><a href="#contact" class="nav-link">Kontak</a></li>
+      </ul>
+
+      <!-- Action Buttons -->
+      <div class="nav-actions">
+        <a href="https://drive.google.com/file/d/17XVc3APcLqBIikroOj8fSLbPgQH3HmnY/view?usp=drive_link" target="_blank" class="btn btn-secondary btn-sm">
+          <span>📄</span> Unduh CV
+        </a>
+        <a href="https://wa.me/6285718532060" target="_blank" class="btn btn-primary btn-sm">
+          <span>💬</span> WhatsApp
+        </a>
+        <button class="menu-toggle" aria-label="Buka Menu Navigasi">☰</button>
       </div>
-      <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-        <defs>
-          <filter id="goo">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-            <feColorMatrix in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -7"/>
-          </filter>
-        </defs>
-      </svg>
     </div>
-    <!-- /Loading animation -->
 
-    <div class="half-bg"></div>
+    <!-- Mobile Drawer -->
+    <div class="mobile-nav">
+      <a href="#about" class="nav-link">Tentang Saya</a>
+      <a href="#skills" class="nav-link">Keahlian Teknis</a>
+      <a href="#projects" class="nav-link">Ekosistem Software</a>
+      <a href="#creative" class="nav-link">Multimedia & Desain</a>
+      <a href="#certificates" class="nav-link">Sertifikat & Pengalaman</a>
+      <a href="#terminal" class="nav-link">Interactive Terminal</a>
+      <a href="#contact" class="nav-link">Hubungi Saya</a>
+      <div style="display: flex; gap: 10px; margin-top: 10px;">
+        <a href="https://drive.google.com/file/d/17XVc3APcLqBIikroOj8fSLbPgQH3HmnY/view?usp=drive_link" target="_blank" class="btn btn-secondary" style="flex:1;">Unduh CV</a>
+        <a href="https://wa.me/6285718532060" target="_blank" class="btn btn-primary" style="flex:1;">Chat WA</a>
+      </div>
+    </div>
+  </header>
 
-    <div class="page">
-      <div class="page-content">
-
-          <header id="site_header" class="header mobile-menu-hide">
-            <div class="header-content">
-              <div class="header-photo">
-                <img src="img/Lukman1.jpg" alt="Lukmanul Hakim">
-              </div>
-              <div class="header-titles">
-                <h2>Lukmanul Hakim</h2>
-                <h4>Designer, Photograph & Videograph</h4>
-              </div>
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION
+         ========================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Hero Text -->
+          <div class="hero-content">
+            <div class="status-indicator">
+              <span class="status-dot"></span>
+              <span>Available for Fullstack & AI Engineering Roles</span>
             </div>
 
-            <ul class="main-menu">
-              <li>
-                <a href="#about-me" class="nav-anim">
-                  <span class="menu-icon lnr lnr-user"></span>
-                  <span class="link-text">About Me</span>
-                </a>
+            <h1 class="hero-title">
+              Hi, Saya <span class="text-gradient">Lukmanul Hakim</span>
+            </h1>
+
+            <div class="hero-role">
+              <span>Fokus:</span>
+              <span class="hero-role-typing"></span>
+            </div>
+
+            <p class="hero-description">
+              Pengembang perangkat lunak berdedikasi tinggi yang mengombinasikan logika komputasi mendalam (Fullstack Web, Bot Otomasi WhatsApp, Cloud DevOps, AI Multimodal) dengan kepekaan estetika multimedia tingkat lanjut. Membangun sistem yang tangguh, efisien, dan berdampak nyata.
+            </p>
+
+            <div class="hero-ctas">
+              <a href="#projects" class="btn btn-primary">
+                <span>🚀</span> Lihat Ekosistem Software
+              </a>
+              <a href="https://drive.google.com/file/d/17XVc3APcLqBIikroOj8fSLbPgQH3HmnY/view?usp=drive_link" target="_blank" class="btn btn-secondary">
+                <span>📄</span> Resume Lengkap (PDF)
+              </a>
+              <a href="https://wa.me/6285718532060" target="_blank" class="btn btn-outline">
+                <span>💬</span> Hubungi Langsung
+              </a>
+            </div>
+
+            <!-- Quick Key Metrics -->
+            <div class="hero-stats">
+              <div class="stat-item">
+                <span class="stat-number" data-target="17" data-suffix="+">17+</span>
+                <span class="stat-label">Software Projects</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number" data-target="3" data-suffix="">3</span>
+                <span class="stat-label">WhatsApp Bot Engines</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number" data-target="99" data-suffix=".9%">99.9%</span>
+                <span class="stat-label">VPS Uptime Reliability</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number" data-target="5" data-suffix="+ Thn">5+ Thn</span>
+                <span class="stat-label">Multimedia Craft</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Avatar -->
+          <div class="hero-avatar-wrapper">
+            <div class="avatar-card">
+              <img 
+                src="https://res.cloudinary.com/s6fg76lj/image/upload/f_auto,q_auto/nullsanz-portfolio/avatar/lukman1" 
+                alt="Lukmanul Hakim - Fullstack Developer & AI Engineer" 
+                class="avatar-img"
+                loading="eager"
+              />
+              <div class="avatar-badge">
+                <div>
+                  <div class="avatar-badge-title">Lukmanul Hakim</div>
+                  <div class="avatar-badge-subtitle">Karawang, Jawa Barat • ID</div>
+                </div>
+                <span style="font-size: 1.5rem;">🇮🇩</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ABOUT ME SECTION
+         ========================================================================== -->
+    <section id="about">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">Profil & Perjalanan</div>
+          <h2 class="section-title">Mengubah Kompleksitas Menjadi Solusi Elegan</h2>
+          <p class="section-subtitle">Kombinasi antara disiplin rekayasa sistem modern dan kreativitas multimedia visual.</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Card 1: Core Background -->
+          <div class="about-card">
+            <div class="about-card-icon">⚡</div>
+            <h3 style="font-size: 1.35rem;">Evolusi & Filosofi Rekayasa</h3>
+            <p>
+              Berangkat dari latar belakang kejuruan <b>Multimedia di SMKN 1 Jatisari</b> dan pengalaman kepemimpinan sebagai <b>Ketua Divisi IT OSIS</b>, saya mengembangkan fondasi visual, komunikasi, dan organisasi yang kuat.
+            </p>
+            <p>
+              Seiring berjalannya waktu, minat saya bertransformasi ke <b>Software Engineering tingkat lanjut</b>: merancang arsitektur bot WhatsApp berbasis WebSocket tanpa ban, mengintegrasikan Google Gemini 1.5 Pro AI multimodal untuk analisis real-time, mengelola Linux VPS mandiri dengan PM2, hingga membangun aplikasi web modern dan Smart TV Android yang responsif.
+            </p>
+            <div class="about-highlight-box">
+              🎯 <b>Prinsip Kerja:</b> Kode yang bersih (clean code), zero-bloatware, performa tinggi, dan pengalaman visual yang memanjakan pengguna.
+            </div>
+          </div>
+
+          <!-- Card 2: Key Competencies -->
+          <div class="about-card">
+            <div class="about-card-icon">🛠️</div>
+            <h3 style="font-size: 1.35rem;">Keahlian Utama & Spesialisasi</h3>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 14px;">
+              <li style="display: flex; gap: 12px;">
+                <span style="color: var(--accent-cyan); font-size: 1.1rem;">▸</span>
+                <div>
+                  <strong style="color: var(--text-primary);">Arsitektur Otomasi Bot WhatsApp:</strong>
+                  <p style="font-size: 0.9rem; margin-top: 2px;">Spesialis engine Baileys WebSocket & Puppeteer Chromium dengan proteksi anti-race condition dan isolasi memori VPS.</p>
+                </div>
               </li>
-              <li>
-                <a href="#resume" class="nav-anim">
-                  <span class="menu-icon lnr lnr-graduation-hat"></span>
-                  <span class="link-text">Resume</span>
-                </a>
+              <li style="display: flex; gap: 12px;">
+                <span style="color: var(--accent-cyan); font-size: 1.1rem;">▸</span>
+                <div>
+                  <strong style="color: var(--text-primary);">Integrasi AI & Intelligence Data:</strong>
+                  <p style="font-size: 0.9rem; margin-top: 2px;">Penerapan Google Gemini 1.5 Pro Multimodal untuk verifikasi dokumen loker/anti-scam serta dual-engine Truecaller + GetContact intel.</p>
+                </div>
               </li>
-              <li>
-                <a href="#portfolio" class="nav-anim">
-                  <span class="menu-icon lnr lnr-briefcase"></span>
-                  <span class="link-text">Portfolio</span>
-                </a>
-              </li>
-              <li>
-                <a href="#contact" class="nav-anim">
-                  <span class="menu-icon lnr lnr-envelope"></span>
-                  <span class="link-text">Contact</span>
-                </a>
+              <li style="display: flex; gap: 12px;">
+                <span style="color: var(--accent-cyan); font-size: 1.1rem;">▸</span>
+                <div>
+                  <strong style="color: var(--text-primary);">Modern Web & Video Processing:</strong>
+                  <p style="font-size: 0.9rem; margin-top: 2px;">React, Vite, Next.js, TailwindCSS, Client-Side PDF lib, serta encoding video FFmpeg 60 FPS BT.709 High-Bitrate.</p>
+                </div>
               </li>
             </ul>
-
-            <div class="social-links">
-              <ul>
-                <li><a href="https://www.instagram.com/nullsanzz?igsh=Y3JydXJjaDlvc2Q0" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/lukmanul-hakim-586658309?trk=contact-info" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                <li><a href="https://www.facebook.com/anul.cekep" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-              </ul>
-            </div>
-
-            <div class="info-list">
-              <ul>
-                <li>
-                  <span class="value">Fresh Graduate</span>
-                </li>
-
-              </ul>
-            </div>
-
-            <div class="header-buttons">
-              <a href="https://drive.google.com/file/d/17XVc3APcLqBIikroOj8fSLbPgQH3HmnY/view?usp=drive_link" target="_blank" class="btn btn-primary">Download CV</a>
-            </div>
-
-            <div class="copyrights">© 2024 All rights reserved.</div>
-          </header>
-
-          <!-- Mobile Navigation -->
-          <div class="menu-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
           </div>
-          <!-- End Mobile Navigation -->
-
-          <!-- Arrows Nav -->
-          <div class="lmpixels-arrows-nav">
-            <div class="lmpixels-arrow-right"><i class="lnr lnr-chevron-right"></i></div>
-            <div class="lmpixels-arrow-left"><i class="lnr lnr-chevron-left"></i></div>
-          </div>
-          <!-- End Arrows Nav -->
-
-          <div class="content-area">
-            <div class="animated-sections">
-
-              <!-- About Me Subpage -->
-              <section data-id="about-me" class="animated-section">
-                <div class="section-content">
-
-                  <div class="row flex-v-align">
-                      <div class="col-sm-12 col-md-6 col-lg-6">
-                        <div class="home-text hp-left">
-
-                          <div class="owl-carousel text-rotation">                                    
-                            <div class="item">
-                              <h4>Creative Visionary & Multimedia Specialist</h4>
-                            </div>
-                            <div class="item">
-                              <h4></h4>
-                            </div>
-                          </div>
-
-                          <h1>Lukmanul Hakim</h1>
-                          <p>Lulusan tahun 2024 dari SMKN 1 JATISARI berkejuruan Multimedia dengan beberapa pengalaman di sekolah, Pernah menjadi pengurus film di program TPAV, Pernah menjadi ketua Divisi IT didalam OSIS, Sehingga mengasah kemampuan komunikasi saya menjadi lebih baik. Saya merupakan pelajar yang cepat dan selalu berkeinginan untuk menjadi bagian dari perusahaan dan siap untuk berkontribusi di perusahaan anda.</p>
-                          
-                          <div class="home-buttons">
-                            <a href="https://drive.google.com/file/d/17XVc3APcLqBIikroOj8fSLbPgQH3HmnY/view?usp=drive_link" target="_blank" class="btn btn-primary">Download CV</a>
-                            <a href="https://wa.me/6285718532060" target="_self" class="btn btn-secondary">Contact</a>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="col-sm-12 col-md-6 col-lg-6">
-                          <div class="home-photo">
-                              <div class="hp-inner" style="background-image: url(img/Lukman.jpg);" ></div>
-                          </div>
-                      </div>
-                  </div>
-
-                  <div class="white-space-70"></div>
-                  <!-- End of Pricing -->
-
-                </div>
-              </section>
-              <!-- End of About Me Subpage -->
-
-              <!-- Resume Subpage -->
-              <section data-id="resume" class="animated-section">
-                <div class="section-content">
-                  <div class="page-title">
-                    <h2>Resume</h2>
-                    <h4>little experience</h4>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-xs-12 col-sm-7">
-
-                      <div class="block-title">
-                        <h3>Skills</h3>
-                      </div>
-                      
-                      <div class="timeline timeline-second-style clearfix">
-                        <div class="timeline-item clearfix">
-                          <div class="left-part">
-                            <h5 class="item-period"></h5>
-                            <span class="item-company"></span>
-                          </div>
-                          <div class="divider"></div>
-                          <div class="right-part">
-                            <h4 class="item-title"></h4>
-                            <p>Menggabungkan keahlian dalam desain grafis, fotografi, videografi, dan administrasi, saya siap membawa keragaman keterampilan ini ke lingkungan kerja baru. Saya yakin bahwa keahlian ini dapat memberikan nilai tambah dalam berbagai konteks, termasuk di perusahaan yang fokusnya bukan pada desain grafis. Saya percaya bahwa kombinasi ini akan membantu saya dalam memecahkan masalah, berkomunikasi secara efektif, dan memberikan kontribusi yang signifikan bagi tim dan perusahaan.</p>
-                          </div>
-                        </div>
-
-                        <div class="timeline-item clearfix">
-                          <div class="left-part">
-                            <h5 class="item-period"></h5>
-                            <span class="item-company"></span>
-                          </div>
-                          <div class="divider"></div>
-                          <div class="right-part">
-                            <h4 class="item-title"></h4>
-                            <p>Terkait dengan beragam keterampilan yang saya miliki, saya siap untuk memberikan kontribusi yang berarti di lingkungan kerja apa pun. Kemampuan saya untuk beradaptasi dan belajar hal-hal baru dengan cepat. Saya yakin bahwa bakat dan dedikasi saya akan menjadi aset berharga bagi tim Anda, membantu mencapai tujuan perusahaan dan menghadirkan solusi inovatif dalam setiap tantangan yang dihadapi.</p>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="white-space-50"></div>
-
-                      <div class="block-title">
-                        <h3>Pendidikan</h3>
-                      </div>
-
-                      <div class="timeline timeline-second-style clearfix">
-                        <div class="timeline-item clearfix">
-                          <div class="left-part">
-                            <h5 class="item-period">2012</h5>
-                            <span class="item-company">SDN 1 Mekarsari</span>
-                          </div>
-                          <div class="divider"></div>
-                          <div class="right-part">
-                            <h4 class="item-title">SDN 1 Mekarsari</h4>
-                            <p>Saya bersekolah di SDN 1 Mekarsari karena rumah dekat dengan sekolah, Saya aktif melakukan kegiatan sekolah seperti menjadi petugas upacara, dll.</p>
-                          </div>
-                        </div>
-
-                        <div class="timeline-item clearfix">
-                          <div class="left-part">
-                            <h5 class="item-period">2018</h5>
-                            <span class="item-company">MTsN 2 Karawang</span>
-                          </div>
-                          <div class="divider"></div>
-                          <div class="right-part">
-                            <h4 class="item-title">Masdrasah Tsanawiyah</h4>
-                            <p>Saya bersekolah di MTsN 2 Karawang karena saya ingin menambah ilmu agama saya terutam dibidang Fiqih, Aqidah, Membaca Al-Qur'an dan memperdalam ilmu agama islam lainnya, Selain itu saya aktif melakukan kegiatan sekolah seperti menjadi petugas kerohanian.</p>
-                          </div>
-                        </div>
-                        
-                        <div class="timeline-item clearfix">
-                          <div class="left-part">
-                            <h5 class="item-period">2021</h5>
-                            <span class="item-company">SMKN 1 Jatisari</span>
-                          </div>
-                          <div class="divider"></div>
-                          <div class="right-part">
-                            <h4 class="item-title">Sekolah Menengah Kejuruan</h4>
-                            <p>Saya memilih SMK karena saya percaya bahwa pendidikan praktis yang ditawarkan akan membekali saya dengan keterampilan langsung yang dibutuhkan untuk memasuki dunia kerja. SMK memberikan kesempatan untuk belajar secara langsung dalam bidang tertentu, yang dapat membantu saya mempersiapkan karier saya di masa depan. Selain itu, saya juga yakin bahwa lingkungan belajar yang berfokus pada praktik akan memberi saya pengalaman yang berharga dan relevan.</p>
-                          </div>
-                        </div>
-                      </div>
-
-                    </div>
-
-                    <!-- Skills & Certificates -->
-                    <div class="col-xs-12 col-sm-5">
-                      <!-- Design Skills -->
-                      <div class="block-title">
-                        <h3>Design Skills</h3>
-                      </div>
-
-                      <div class="skills-info skills-second-style">
-                        <!-- Skill 1 -->
-                        <div class="skill clearfix">
-                          <h4>Videografi</h4>
-                          <div class="skill-value">90%</div>
-                        </div>
-                        <div class="skill-container skill-1">
-                          <div class="skill-percentage"></div>
-                        </div>
-                        <!-- End of Skill 1 -->
-                        
-                        <!-- Skill 2 -->
-                        <div class="skill clearfix">
-                          <h4>Fotografi</h4>
-                          <div class="skill-value">95%</div>
-                        </div>
-                        <div class="skill-container skill-2">
-                          <div class="skill-percentage"></div>
-                        </div>
-                        <!-- End of Skill 2 -->
-                        
-                        <!-- Skill 3 -->
-                        <div class="skill clearfix">
-                          <h4>Logo Design</h4>
-                          <div class="skill-value">80%</div>
-                        </div>
-                        <div class="skill-container skill-3">
-                          <div class="skill-percentage"></div>
-                        </div>
-                        <!-- End of Skill 3 -->
-                        
-                      
-                      
-                      <!-- End of Design Skills -->
-
-                      <div class="white-space-10"></div>
-
-                      <!-- Coding Skills -->
-                      <div class="block-title">
-                        <h3>Personal Skills</h3>
-                      </div>
-
-                      <div class="skills-info skills-second-style">
-                        <!-- Skill 5 -->
-                        <div class="skill clearfix">
-                          <h4>Kemampuan beradaptasi</h4>
-                          <div class="skill-value">95%</div>
-                        </div>
-                        <div class="skill-container skill-5">
-                          <div class="skill-percentage"></div>
-                        </div>
-                        <!-- End of Skill 5 -->
-
-                        <!-- Skill 6 -->
-                        <div class="skill clearfix">
-                          <h4>Kemampuan mengelola waktu</h4>
-                          <div class="skill-value">95%</div>
-                        </div>
-                        <div class="skill-container skill-6">
-                          <div class="skill-percentage"></div>
-                        </div>
-                        <!-- End of Skill 6 -->
-                        
-                        <!-- Skill 7 -->
-                        <div class="skill clearfix">
-                          <h4>Kemampuan dalam mengelola stres</h4>
-                          <div class="skill-value">100%</div>
-                        </div>
-                        <div class="skill-container skill-7">
-                          <div class="skill-percentage"></div>
-                        </div>
-                        <!-- End of Skill 7 -->
-                        
-                        <!-- Skill 8 -->
-                        <div class="skill clearfix">
-                          <h4>Kemampuan dalam memimpin atau bekerja di bawah arahan</h4>
-                          <div class="skill-value">90%</div>
-                        </div>
-                        <div class="skill-container skill-8">
-                          <div class="skill-percentage"></div>
-                        </div>
-                        <!-- End of Skill 8 -->
-
-                        <!-- Skill 9 -->
-                        <div class="skill clearfix">
-                          <h4>Komunikasi yang efektif</h4>
-                          <div class="skill-value">90%</div>
-                        </div>
-                        <div class="skill-container skill-9">
-                          <div class="skill-percentage"></div>
-                        </div>
-                        <!-- End of Skill 9 -->
-                      </div>
-                      <!-- End of Coding Skills -->
-
-                      <div class="white-space-10"></div>
-
-                      <!-- Knowledges -->
-                      <div class="block-title">
-                        <h3>Knowledges</h3>
-                      </div>
-
-                      <ul class="knowledges">
-                        <li>Marketing</li>
-                        <li>Print</li>
-                        <li>Digital Design</li>
-                        <li>Videograph</li>
-                        <li>Photograph</li>
-                        <li>Communication</li>
-                        <li>Content Creator</li>
-                        <li>Editing</li>
-                        <li>Administration</li>
-                      </ul>
-                      <!-- End of Knowledges -->
-                    </div>
-                    <!-- End of Skills & Certificates -->
-                  </div>
-
-                  <div class="white-space-50"></div>
-
-                  <!-- Certificates -->
-                  <div class="row">
-                    <div class="col-xs-12 col-sm-12">
-                      <div class="block-title">
-                        <h3>Certificates</h3>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div class="row">
-                    <!-- Certificate 1 -->
-                    <div class="col-xs-12 col-sm-6">
-                        <div class="certificate-item clearfix" onclick="openModal('modal1')">
-                            <div class="certi-logo">
-                                <img src="img/clients/sertifikat.jpg" alt="logo">
-                            </div>
-                            <div class="certi-content">
-                                <div class="certi-title">
-                                    <h4>PT. PRESHION ENGPLAS</h4>
-                                </div>
-                                <div class="certi-id">
-                                    <span>Praktik Kerja Lapangan (PKL)</span>
-                                </div>
-                                <div class="certi-date">
-                                    <span>September 2022 - Desember 2022</span>
-                                </div>
-                                <div class="certi-company">
-                                    <span></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                
-                    <!-- Certificate 2 -->
-                    <div class="col-xs-12 col-sm-6">
-                        <div class="certificate-item clearfix" onclick="openModal('modal2')">
-                            <div class="certi-logo">
-                                <img src="img/clients/sertifikat2.jpg" alt="logo">
-                            </div>
-                            <div class="certi-content">
-                                <div class="certi-title">
-                                    <h4>OSIS SMKN 1 JATISARI</h4>
-                                </div>
-                                <div class="certi-id">
-                                    <span>Ketua Divisi Teknik Informasi Telekomunikasi (TIT)</span>
-                                </div>
-                                <div class="certi-date">
-                                    <span>2022 - 2024</span>
-                                </div>
-                                <div class="certi-company">
-                                    <span></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                
-                    <!-- Certificate 3 -->
-                    <div class="col-xs-12 col-sm-6">
-                        <div class="certificate-item clearfix" onclick="openModal('modal3')">
-                            <div class="certi-logo">
-                                <img src="img/clients/sertifikat3.jpg" alt="Kompetensi Keahlian Bagian Depan">
-                            </div>
-                            <div class="certi-content">
-                                <div class="certi-title">
-                                    <h4>Sertifikat Kompetensi Keahlian</h4>
-                                </div>
-                                <div class="certi-id">
-                                    <span>Bagian Depan</span>
-                                </div>
-                                <div class="certi-date">
-                                    <span>Desember 2024</span>
-                                </div>
-                                <div class="certi-company">
-                                    <span></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                
-                    <!-- Certificate 4 -->
-                    <div class="col-xs-12 col-sm-6">
-                        <div class="certificate-item clearfix" onclick="openModal('modal4')">
-                            <div class="certi-logo">
-                                <img src="img/clients/sertifikat4.jpg" alt="Kompetensi Keahlian Bagian Belakang">
-                            </div>
-                            <div class="certi-content">
-                                <div class="certi-title">
-                                    <h4>Sertifikat Kompetensi Keahlian</h4>
-                                </div>
-                                <div class="certi-id">
-                                    <span>Bagian Belakang</span>
-                                </div>
-                                <div class="certi-date">
-                                    <span>Desember 2024</span>
-                                </div>
-                                <div class="certi-company">
-                                    <span></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Modal Structure -->
-                <div id="modal1" class="modal">
-                    <span class="close" onclick="closeModal('modal1')">&times;</span>
-                    <img class="modal-content" id="img01">
-                    <div id="caption1"></div>
-                </div>
-                
-                <div id="modal2" class="modal">
-                    <span class="close" onclick="closeModal('modal2')">&times;</span>
-                    <img class="modal-content" id="img02">
-                    <div id="caption2"></div>
-                </div>
-                
-                <div id="modal3" class="modal">
-                    <span class="close" onclick="closeModal('modal3')">&times;</span>
-                    <img class="modal-content" id="img03">
-                    <div id="caption3"></div>
-                </div>
-                
-                <div id="modal4" class="modal">
-                    <span class="close" onclick="closeModal('modal4')">&times;</span>
-                    <img class="modal-content" id="img04">
-                    <div id="caption4"></div>
-                </div>                
-                  <!-- End of Certificates -->
-                </div>
-              </section>
-              <!-- End of Resume Subpage -->
-
-              <!-- Portfolio Subpage -->
-              <section data-id="portfolio" class="animated-section">
-                <div class="section-content">
-                  <div class="page-title">
-                    <h2>Portfolio</h2>
-                    <h4>My Best Works</h4>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-xs-12 col-sm-12">
-                      <!-- Portfolio Content -->
-                      <div class="portfolio-content">
-
-                        <ul class="grid-filters portfolio-filters">
-                          <li class="active">
-                            <a class="filter btn btn-sm btn-link" data-filter=".category_all">All</a>
-                          </li>
-                          <li>
-                            <a class="filter btn btn-sm btn-link" data-filter=".category_detailed">Coding</a>
-                          </li>
-                          <li>
-                            <a class="filter btn btn-sm btn-link" data-filter=".category_soundcloud">Design</a>
-                          </li>
-                          <li>
-                            <a class="filter btn btn-sm btn-link" data-filter=".category_youtube-videos">Videografi</a>
-                          </li>
-                          <li>
-                            <a class="filter btn btn-sm btn-link" data-filter=".category_photos">Fotografi</a>
-                          </li>
-                        </ul>
-
-                        <!-- Portfolio Grid -->
-                        <div class="portfolio-grid two-columns">
-                          
-                          <figure class="item lbaudio category_all category_soundcloud">
-                            <div class="portfolio-item-img">
-                              <img src="img/portfolio/seblak.jpg" alt="SoundCloud Audio" title="" />
-                            </div>
-
-                            <i class="fa fa-volume-up"></i>
-                            <h4 class="name"><span>Design</span> Banner</h4>
-                            <span class="category">Design</span>
-                          </figure>
-
-                          <figure class="item standard category_all category_soundcloud">
-                            <div class="portfolio-item-img">
-                              <img src="img/portfolio/busana.jpg" alt="Media Project 2" title="" />
-                              <a href="portfolio-1.html" class="ajax-page-load"></a>
-                            </div>
-
-                            <i class="far fa-file-alt"></i>
-                            <h4 class="name"><span>Banner</span> Design</h4>
-                            <span class="category">Banner Design</span>
-                          </figure>
-
-                          <figure class="item lbvideo category_all category_soundcloud">
-                            <div class="portfolio-item-img">
-                              <img src="img/portfolio/seblak 2.jpg" alt="Vimeo Video 1" title="" />
-                           
-                            </div>
-
-                            <i class="fas fa-video"></i>
-                            <h4 class="name"><span>Banner</span> Desain</h4>
-                            <span class="category">Banner Desain</span>
-                          </figure>
-
-                          <figure class="item lbvideo category_all category_soundcloud">
-                            <div class="portfolio-item-img">
-                              <img src="img/portfolio/seblak 3.jpg" alt="Vimeo Video 1" title="" />
-                           
-                            </div>
-
-                            <i class="fas fa-video"></i>
-                            <h4 class="name"><span>Banner</span> Desain</h4>
-                            <span class="category">Banner Desain</span>
-                          </figure>
-
-                          <figure class="item standard category_all category_soundcloud">
-                            <div class="portfolio-item-img">
-                              <img src="img/portfolio/ciken.jpg" alt="Media Project 1" title="" />
-                              
-                            </div>
-
-                            <i class="far fa-file-alt"></i>
-                            <h4 class="name"><span>Banner</span>Desain</h4>
-                            <span class="category">Banner Desain</span>
-                          </figure>
-
-                          <figure class="item lbimage category_all category_soundcloud">
-                            <div class="portfolio-item-img">
-                              <img src="img/portfolio/kalender.jpg" alt="SoundCloud Audio" title="" />
-                              
-                            </div>
-
-                            <i class="far fa-image"></i>
-                            <h4 class="name"><span>Kalender</span>Desain</h4>
-                            <span class="category">Desain Kalender</span>
-                          </figure>
-
-                          <figure class="item lbvideo category_all category_soundcloud">
-                            <div class="portfolio-item-img">
-                              <img src="img/portfolio/baklor.jpg" alt="SoundCloud Audio" title="" />
-                            </div>
-
-                            <i class="fas fa-video"></i>
-                            <h4 class="name"><span>Banner</span>Desain</h4>
-                            <span class="category">Desain Banner</span>
-                          </figure>
-
-                          <figure class="item lbaudio category_all category_soundcloud">
-                            <div class="portfolio-item-img">
-                              <img src="img/portfolio/haji.jpg" alt="SoundCloud Audio" title="" />
-                            </div>
-
-                            <i class="fa fa-volume-up"></i>
-                            <h4 class="name"><span>Design</span> Banner</h4>
-                            <span class="category">Design</span>
-                          </figure>
-
-                          <figure class="item lbaudio category_all category_soundcloud">
-                            <div class="portfolio-item-img">
-                              <img src="img/portfolio/khitan.jpg" alt="SoundCloud Audio" title="" />
-                            </div>
-
-                            <i class="fa fa-volume-up"></i>
-                            <h4 class="name"><span>Design</span> Banner</h4>
-                            <span class="category">Design</span>
-                          </figure>
-
-                          <figure class="item lbaudio category_all category_soundcloud">
-                            <div class="portfolio-item-img">
-                              <img src="img/portfolio/nt1.jpg" alt="SoundCloud Audio" title="" />
-                            </div>
-
-                            <i class="fa fa-volume-up"></i>
-                            <h4 class="name"><span>Design</span> Name Tag</h4>
-                            <span class="category">Design</span>
-                          </figure>
-
-                          <figure class="item lbaudio category_all category_soundcloud">
-                            <div class="portfolio-item-img">
-                              <img src="img/portfolio/nt2.jpg" alt="SoundCloud Audio" title="" />
-                            </div>
-
-                            <i class="fa fa-volume-up"></i>
-                            <h4 class="name"><span>Design</span> Name Tag</h4>
-                            <span class="category">Design</span>
-                          </figure>
-
-                          <figure class="item lbaudio category_all category_soundcloud">
-                            <div class="portfolio-item-img">
-                              <img src="img/portfolio/nt3.jpg" alt="SoundCloud Audio" title="" />
-                            </div>
-
-                            <i class="fa fa-volume-up"></i>
-                            <h4 class="name"><span>Design</span> Name Tag</h4>
-                            <span class="category">Design</span>
-                          </figure>
-
-                          <figure class="item lbaudio category_all category_soundcloud">
-                            <div class="portfolio-item-img">
-                              <img src="img/portfolio/nt4.jpg" alt="SoundCloud Audio" title="" />
-                            </div>
-
-                            <i class="fa fa-volume-up"></i>
-                            <h4 class="name"><span>Design</span> Name Tag</h4>
-                            <span class="category">Design</span>
-                          </figure>
-
-                          <figure class="item lbaudio category_all category_soundcloud">
-                            <div class="portfolio-item-img">
-                              <img src="img/portfolio/nt5.jpg" alt="SoundCloud Audio" title="" />
-                            </div>
-
-                            <i class="fa fa-volume-up"></i>
-                            <h4 class="name"><span>Design</span> Name Tag</h4>
-                            <span class="category">Design</span>
-                          </figure>
-
-                          <figure class="item lbaudio category_all category_soundcloud">
-                            <div class="portfolio-item-img">
-                              <img src="img/portfolio/nt6.jpg" alt="SoundCloud Audio" title="" />
-                            </div>
-
-                            <i class="fa fa-volume-up"></i>
-                            <h4 class="name"><span>Design</span> Name Tag</h4>
-                            <span class="category">Design</span>
-                          </figure>
-
-                          <figure class="item lbaudio category_all category_photos">
-                            <div class="portfolio-item-img">
-                              <img src="img/portfolio/ft1.jpg" alt="SoundCloud Audio" title="" />
-                            </div>
-
-                            <i class="fa fa-volume-up"></i>
-                            <h4 class="name"><span>Photo</span> graph</h4>
-                            <span class="category">Photo</span>
-                          </figure>
-
-                          <figure class="item lbaudio category_all category_photos">
-                            <div class="portfolio-item-img">
-                              <img src="img/portfolio/ft2.jpg" alt="SoundCloud Audio" title="" />
-                            </div>
-
-                            <i class="fa fa-volume-up"></i>
-                            <h4 class="name"><span>Photo</span> graph</h4>
-                            <span class="category">Photo</span>
-                          </figure>
-
-                          <figure class="item lbaudio category_all category_photos">
-                            <div class="portfolio-item-img">
-                              <img src="img/portfolio/ft3.jpg" alt="SoundCloud Audio" title="" />
-                            </div>
-
-                            <i class="fa fa-volume-up"></i>
-                            <h4 class="name"><span>Photo</span> graph</h4>
-                            <span class="category">Photo</span>
-                          </figure>
-
-                          <figure class="item lbaudio category_all category_photos">
-                            <div class="portfolio-item-img">
-                              <img src="img/portfolio/ft4.jpg" alt="SoundCloud Audio" title="" />
-                            </div>
-
-                            <i class="fa fa-volume-up"></i>
-                            <h4 class="name"><span>Photo</span> graph</h4>
-                            <span class="category">Photo</span>
-                          </figure>
-
-                          <figure class="item lbaudio category_all category_photos">
-                            <div class="portfolio-item-img">
-                              <img src="img/portfolio/ft5.jpg" alt="SoundCloud Audio" title="" />
-                            </div>
-
-                            <i class="fa fa-volume-up"></i>
-                            <h4 class="name"><span>Photo</span> graph</h4>
-                            <span class="category">Photo</span>
-                          </figure>
-
-                          <figure class="item lbaudio category_all category_photos">
-                            <div class="portfolio-item-img">
-                              <img src="img/portfolio/ft6.jpg" alt="SoundCloud Audio" title="" />
-                            </div>
-
-                            <i class="fa fa-volume-up"></i>
-                            <h4 class="name"><span>Photo</span> graph</h4>
-                            <span class="category">Photo</span>
-                          </figure>
-
-                          <figure class="item lbaudio category_all category_photos">
-                            <div class="portfolio-item-img">
-                              <img src="img/portfolio/ft7.jpg" alt="SoundCloud Audio" title="" />
-                            </div>
-
-                            <i class="fa fa-volume-up"></i>
-                            <h4 class="name"><span>Photo</span> graph</h4>
-                            <span class="category">Photo</span>
-                          </figure>
-
-                          <figure class="item lbaudio category_all category_photos">
-                            <div class="portfolio-item-img">
-                              <img src="img/portfolio/ft8.jpg" alt="SoundCloud Audio" title="" />
-                            </div>
-
-                            <i class="fa fa-volume-up"></i>
-                            <h4 class="name"><span>Photo</span> graph</h4>
-                            <span class="category">Photo</span>
-                          </figure>
-
-                          <figure class="item lbaudio category_all category_photos">
-                            <div class="portfolio-item-img">
-                              <img src="img/portfolio/ft9.jpg" alt="SoundCloud Audio" title="" />
-                            </div>
-
-                            <i class="fa fa-volume-up"></i>
-                            <h4 class="name"><span>Photo</span> graph</h4>
-                            <span class="category">Photo</span>
-                          </figure>
-
-                          <figure class="item lbaudio category_all category_photos">
-                            <div class="portfolio-item-img">
-                              <img src="img/portfolio/ft10.jpg" alt="SoundCloud Audio" title="" />
-                            </div>
-
-                            <i class="fa fa-volume-up"></i>
-                            <h4 class="name"><span>Photo</span> graph</h4>
-                            <span class="category">Photo</span>
-                          </figure>
-
-                          <figure class="item lbaudio category_all category_photos">
-                            <div class="portfolio-item-img">
-                              <img src="img/portfolio/ft11.jpg" alt="SoundCloud Audio" title="" />
-                            </div>
-
-                            <i class="fa fa-volume-up"></i>
-                            <h4 class="name"><span>Photo</span> graph</h4>
-                            <span class="category">Photo</span>
-                          </figure>
-
-                          <figure class="item lbaudio category_all category_photos">
-                            <div class="portfolio-item-img">
-                              <img src="img/portfolio/ft12.jpg" alt="SoundCloud Audio" title="" />
-                            </div>
-
-                            <i class="fa fa-volume-up"></i>
-                            <h4 class="name"><span>Photo</span> graph</h4>
-                            <span class="category">Photo</span>
-                          </figure>
-
-                          <figure class="item lbaudio category_all category_youtube-videos">
-                            <div class="video-container">
-                              <iframe src="https://youtube.com/embed/xGbmQe617Xw?si=1LRjINpL1XuDAR4s" allowfullscreen></iframe>
-                          </figure>
-
-                          <figure class="item lbaudio category_all category_youtube-videos">
-                            <div class="video-container">
-                              <iframe src="https://youtube.com/embed/iEj0qhwJE_o?si=3GBOueZQGvws2KdU" allowfullscreen></iframe>
-                          </figure>
-
-                          <figure class="item lbaudio category_all category_youtube-videos">
-                            <div class="video-short">
-                              <iframe src="https://drive.google.com/file/d/1_cEn1Bi15IiVYutag5ot6hniX_DqFVKN/preview" allowfullscreen></iframe>
-                            <div>
-                          
-                           <i class="fa fa-volume-up"></i>
-                           <h4 class="name"><span>Short</span> video</h4>
-                           <span class="category"></span>
-                          </figure>
-
-                          <figure class="item lbaudio category_all category_youtube-videos">
-                            <div class="video-short">
-                              <iframe src="https://drive.google.com/file/d/1S3RNSAkVxOw3Z1lX2U-E1rjJChUWQHFf/preview" allowfullscreen></iframe>
-                            <div>
-                          
-                           <i class="fa fa-volume-up"></i>
-                           <h4 class="name"><span>Short</span> video</h4>
-                           <span class="category"></span>
-                          </figure>
-
-                          <figure class="item lbaudio category_all category_youtube-videos">
-                            <div class="video-short">
-                              <iframe src="https://drive.google.com/file/d/1ku3nDOPixVM75ANnLt4xdlJ9q8BF7g_p/preview" allowfullscreen></iframe>
-                            <div>
-                          
-                           <i class="fa fa-volume-up"></i>
-                           <h4 class="name"><span>Short</span> video</h4>
-                           <span class="category"></span>
-                          </figure>
-
-                          <figure class="item lbaudio category_all category_youtube-videos">
-                            <div class="video-short">
-                              <iframe src="https://drive.google.com/file/d/1cbl2k5zb30bPL7-oUVjefZItZBOb1DaQ/preview" allowfullscreen></iframe>
-                            <div>
-                          
-                           <i class="fa fa-volume-up"></i>
-                           <h4 class="name"><span>Short</span> video</h4>
-                           <span class="category"></span>
-                          </figure>
-
-                          <figure class="item lbaudio category_all category_youtube-videos">
-                            <div class="video-short">
-                              <iframe src="https://drive.google.com/file/d/11J9xzPDkvwIykoB4NiN9AwQvmDMypPTE/preview" allowfullscreen></iframe>
-                            <div>
-                          
-                           <i class="fa fa-volume-up"></i>
-                           <h4 class="name"><span>Short</span> video</h4>
-                           <span class="category"></span>
-                          </figure>
-
-                          <figure class="item lbaudio category_all category_youtube-videos">
-                            <div class="video-short">
-                              <iframe src="https://drive.google.com/file/d/1RUN8IE5jYh-b7Lb5q7t-Wnu-N2A_cVDz/preview" allowfullscreen></iframe>
-                            <div>
-                          
-                           <i class="fa fa-volume-up"></i>
-                           <h4 class="name"><span>Short</span> video</h4>
-                           <span class="category"></span>
-                          </figure>
-
-                          <figure class="item lbaudio category_all category_youtube-videos">
-                            <div class="video-short">
-                              <iframe src="https://drive.google.com/file/d/1LyJHWgci85rmfNC-H2UCSqpTXfR6K2dc/preview" allowfullscreen></iframe>
-                            <div>
-                          
-                           <i class="fa fa-volume-up"></i>
-                           <h4 class="name"><span>Short</span> video</h4>
-                           <span class="category"></span>
-                          </figure>
-
-                          <figure class="item lbaudio category_all category_youtube-videos">
-                            <div class="video-short">
-                              <iframe src="https://drive.google.com/file/d/13xospYaLM_3wBDvojVJstTMcxr2AlJbN/preview" allowfullscreen></iframe>
-                            <div>
-                          
-                           <i class="fa fa-volume-up"></i>
-                           <h4 class="name"><span>Short</span> video</h4>
-                           <span class="category"></span>
-                          </figure>
-
-                          <figure class="item lbaudio category_all category_youtube-videos">
-                            <div class="video-short">
-                              <iframe src="https://drive.google.com/file/d/1u0clY7jz8DCgQ13XKD3X-D-jwu20OQM1/preview" allowfullscreen></iframe>
-                            <div>
-                          
-                           <i class="fa fa-volume-up"></i>
-                           <h4 class="name"><span>Short</span> video</h4>
-                           <span class="category"></span>
-                          </figure>
-
-                          <figure class="item lbaudio category_all category_youtube-videos">
-                            <div class="video-short">
-                              <iframe src="https://drive.google.com/file/d/1Ro3IO-PyvQUco0W9gPZ3N860PA51RJJ9/preview" allowfullscreen></iframe>
-                            <div>
-                          
-                           <i class="fa fa-volume-up"></i>
-                           <h4 class="name"><span>Short</span> video</h4>
-                           <span class="category"></span>
-                          </figure>
-
-                          <figure class="item lbaudio category_all category_youtube-videos">
-                            <div class="video-short">
-                              <iframe src="https://drive.google.com/file/d/1DCwwCMq7WaoDFGqg1tBSIyrmILCkaJyV/preview" allowfullscreen></iframe>
-                            <div>
-                          
-                           <i class="fa fa-volume-up"></i>
-                           <h4 class="name"><span>Short</span> video</h4>
-                           <span class="category"></span>
-                          </figure>
-
-                          <figure class="item lbaudio category_all category_youtube-videos">
-                            <div class="video-short">
-                              <iframe src="https://drive.google.com/file/d/1VBFu3iuw1PLmVhDvm9IwTmi3sRGhc6UC/preview" allowfullscreen></iframe>
-                            <div>
-                          
-                           <i class="fa fa-volume-up"></i>
-                           <h4 class="name"><span>Short</span> video</h4>
-                           <span class="category"></span>
-                          </figure>
-
-                          <figure class="item lbaudio category_all category_youtube-videos">
-                            <div class="video-short">
-                              <iframe src="https://drive.google.com/file/d/1jVP2j8MmnAxaV0Mzr3IM1-rb57K5--qU/preview" allowfullscreen></iframe>
-                            <div>
-                          
-                           <i class="fa fa-volume-up"></i>
-                           <h4 class="name"><span>Short</span> video</h4>
-                           <span class="category"></span>
-                          </figure>
-
-                          <figure class="item lbaudio category_all category_youtube-videos">
-                            <div class="video-short">
-                              <iframe src="https://drive.google.com/file/d/11-PE9M9hL6tSsJ2cPLTC-J5hXtgHwicb/preview" allowfullscreen></iframe>
-                            <div>
-                          
-                           <i class="fa fa-volume-up"></i>
-                           <h4 class="name"><span>Short</span> video</h4>
-                           <span class="category"></span>
-                          </figure>
-                        </div>
-                      
-                      <!-- End of Portfolio Content -->
-                    </div>
-                  </div>
-                </div>
-              </section>
-              <!-- End of Portfolio Subpage -->
-
-              <!-- Contact Subpage -->
-              <section data-id="contact" class="animated-section">
-                <div class="section-content">
-                  <div class="page-title">
-                    <h2>Contact</h2>
-                    <h4>Get in Touch</h4>
-                  </div>
-
-                  <div class="row">
-                    <!-- Contact Info -->
-                    <div class="col-xs-12 col-sm-4">
-                      <div class="lm-info-block gray-default">
-                        <i class="lnr lnr-map-marker"></i>
-                        <h4>Karawang, Jawa Barat, Indonesia</h4>
-                        <span class="lm-info-block-value"></span>
-                        <span class="lm-info-block-text"></span>
-                      </div>
-                    </div>
-
-                    <div class="col-xs-12 col-sm-4">
-                      <div class="lm-info-block gray-default">
-                        <i class="lnr lnr-phone-handset"></i>
-                        <h4>+62 857-1853-2060</h4>
-                        <span class="lm-info-block-value"></span>
-                        <span class="lm-info-block-text"></span>
-                      </div>
-                    </div>
-
-                    <div class="col-xs-12 col-sm-4">
-                      <div class="lm-info-block gray-default">
-                        <i class="lnr lnr-envelope"></i>
-                        <h4>tsanlikar701@gmail.com</a></h4>
-                        <span class="lm-info-block-value"></span>
-                        <span class="lm-info-block-text"></span>
-                      </div>
-                    </div>
-                    <!-- End of Contact Info -->
-                  </div>
-
-                  <div class="row">
-                     <!-- Google Map -->
-                    <div class="col-xs-12 col-sm-12">
-                      <div class="white-space-20"></div>
-                      <!-- Google Map -->
-                      <div class="lmpixels-map">
-                        <a href="https://maps.app.goo.gl/cdQmz1VV57DjvCyg8" class="white-space-20"></a>
-                      </div>
-                    </div>
-                    <!-- End of Google Map -->
-                  </div>
-
-                  <div class="row">
-                    <div class="col-xs-12 col-sm-2">
-                    </div>
-                    
-                    <!-- End of Contact Form -->
-                  </div>
-
-                </div>
-              </section>
-              <!-- End of Contact Subpage -->
-            </div>
-          </div>
-
+        </div>
       </div>
+    </section>
+
+    <!-- ==========================================================================
+         SKILLS MATRIX SECTION
+         ========================================================================== -->
+    <section id="skills" style="background: rgba(15, 23, 42, 0.3);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">Tech Stack & Tools</div>
+          <h2 class="section-title">Matriks Keahlian Teknis</h2>
+          <p class="section-subtitle">Teknologi dan perkakas yang saya gunakan secara profesional dalam produksi nyata.</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- 1. Frontend -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon" style="background: rgba(59, 130, 246, 0.15); color: #60A5FA;">💻</div>
+              <div class="skill-cat-title">Frontend Development</div>
+            </div>
+            <div class="skill-pills">
+              <span class="skill-pill">React.js</span>
+              <span class="skill-pill">Vite</span>
+              <span class="skill-pill">Next.js</span>
+              <span class="skill-pill">TailwindCSS</span>
+              <span class="skill-pill">HTML5 & Vanilla CSS</span>
+              <span class="skill-pill">JavaScript ES6+</span>
+              <span class="skill-pill">HTML5 Canvas API</span>
+              <span class="skill-pill">pdf-lib Engine</span>
+            </div>
+          </div>
+
+          <!-- 2. Backend & Bots -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon" style="background: rgba(16, 185, 129, 0.15); color: #34D399;">⚙️</div>
+              <div class="skill-cat-title">Backend & Bot Systems</div>
+            </div>
+            <div class="skill-pills">
+              <span class="skill-pill">Node.js</span>
+              <span class="skill-pill">Express.js</span>
+              <span class="skill-pill">Baileys WebSocket</span>
+              <span class="skill-pill">Puppeteer Chromium</span>
+              <span class="skill-pill">FFmpeg Ultra HD</span>
+              <span class="skill-pill">REST APIs</span>
+              <span class="skill-pill">OAuth 2.0 Flow</span>
+            </div>
+          </div>
+
+          <!-- 3. Cloud & DevOps -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon" style="background: rgba(139, 92, 246, 0.15); color: #A78BFA;">☁️</div>
+              <div class="skill-cat-title">Cloud, DB & DevOps</div>
+            </div>
+            <div class="skill-pills">
+              <span class="skill-pill">Linux VPS (Ubuntu)</span>
+              <span class="skill-pill">PM2 Process Manager</span>
+              <span class="skill-pill">Firebase Realtime DB</span>
+              <span class="skill-pill">Cloudinary Global CDN</span>
+              <span class="skill-pill">Vercel Deployment</span>
+              <span class="skill-pill">Google Apps Script</span>
+              <span class="skill-pill">Git & GitHub Actions</span>
+            </div>
+          </div>
+
+          <!-- 4. AI & Intelligence -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon" style="background: rgba(6, 182, 212, 0.15); color: #38BDF8;">🤖</div>
+              <div class="skill-cat-title">AI & Phone Intelligence</div>
+            </div>
+            <div class="skill-pills">
+              <span class="skill-pill">Google Gemini 1.5 Pro</span>
+              <span class="skill-pill">Multimodal Vision AI</span>
+              <span class="skill-pill">Prompt Engineering</span>
+              <span class="skill-pill">Truecaller API Scraper</span>
+              <span class="skill-pill">GetContact Community Intel</span>
+              <span class="skill-pill">Anti-Scam Blacklist Engine</span>
+            </div>
+          </div>
+
+          <!-- 5. Mobile & Smart TV -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon" style="background: rgba(245, 158, 11, 0.15); color: #FBBF24;">📺</div>
+              <div class="skill-cat-title">Mobile & Smart TV</div>
+            </div>
+            <div class="skill-pills">
+              <span class="skill-pill">React Native</span>
+              <span class="skill-pill">Expo SDK 54</span>
+              <span class="skill-pill">Android TV APK</span>
+              <span class="skill-pill">D-Pad Focus Engine</span>
+              <span class="skill-pill">Watchdog Stream Failover</span>
+              <span class="skill-pill">WebView Sandboxing</span>
+            </div>
+          </div>
+
+          <!-- 6. Multimedia & Visual -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon" style="background: rgba(236, 72, 153, 0.15); color: #F472B6;">🎨</div>
+              <div class="skill-cat-title">Multimedia & Desain</div>
+            </div>
+            <div class="skill-pills">
+              <span class="skill-pill">Adobe Premiere Pro</span>
+              <span class="skill-pill">Adobe Photoshop</span>
+              <span class="skill-pill">Adobe After Effects</span>
+              <span class="skill-pill">CorelDraw</span>
+              <span class="skill-pill">Studio Pas Foto A4</span>
+              <span class="skill-pill">Videografi & Color Grading</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         MASTER SOFTWARE ECOSYSTEM SECTION (17+ PROJECTS)
+         ========================================================================== -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">Production Showcase</div>
+          <h2 class="section-title">Ekosistem Software Unggulan</h2>
+          <p class="section-subtitle">Kompilasi proyek nyata yang aktif melayani pengguna, mengotomasi workflow, dan ter-deploy di server.</p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="filter-tabs">
+          <button class="filter-btn project-filter-btn active" data-filter="all">Semua Proyek (12)</button>
+          <button class="filter-btn project-filter-btn" data-filter="web">Web Applications</button>
+          <button class="filter-btn project-filter-btn" data-filter="bot">WhatsApp Bots & Automation</button>
+          <button class="filter-btn project-filter-btn" data-filter="ai">AI & Intelligence</button>
+          <button class="filter-btn project-filter-btn" data-filter="media">Multimedia & Tools</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+          
+          <!-- 1. Bot Loker Bray -->
+          <div class="project-card" data-category="bot ai">
+            <div>
+              <div class="project-badge-bar">
+                <span class="project-category">WhatsApp Bot / AI</span>
+                <span class="project-status">🟢 Live VPS (PM2: 0)</span>
+              </div>
+              <h3 class="project-title">Bot WhatsApp Loker Bray v2.0</h3>
+              <p class="project-description">
+                Backend bot WhatsApp berskala besar berbasis Baileys WebSocket. Dilengkapi auto-ACC join group anti-race condition, query karir real-time, analisis loker multimodal Google Gemini 1.5 Pro (.cekloker), serta dual-engine phone intelligence (Truecaller + GetContact).
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Node.js</span>
+                <span class="project-tag">Baileys</span>
+                <span class="project-tag">Gemini AI</span>
+                <span class="project-tag">Truecaller</span>
+                <span class="project-tag">Firebase</span>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Core Backend</span>
+              <a href="https://wa.me/6281313656442" target="_blank" class="project-link">
+                Uji Coba Bot ➔
+              </a>
+            </div>
+          </div>
+
+          <!-- 2. Shortlink Studio -->
+          <div class="project-card" data-category="web">
+            <div>
+              <div class="project-badge-bar">
+                <span class="project-category">Web Platform</span>
+                <span class="project-status">🟢 Live Production</span>
+              </div>
+              <h3 class="project-title">Shortlink Studio & Redirector</h3>
+              <p class="project-description">
+                Platform penyingkat URL bermerek kustom di link.anull.cloud. Dilengkapi proteksi password admin, generator QR code live, pelacakan klik Firebase Realtime DB, serta halaman redirect super cepat (&lt;0.05s) dengan animasi roket lucu hardware-accelerated.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">React</span>
+                <span class="project-tag">Vite</span>
+                <span class="project-tag">Firebase DB</span>
+                <span class="project-tag">TailwindCSS</span>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <span style="font-size: 0.8rem; color: var(--text-muted);">link.anull.cloud</span>
+              <a href="https://qr.anull.cloud/link" target="_blank" class="project-link">
+                Buka Studio ➔
+              </a>
+            </div>
+          </div>
+
+          <!-- 3. CV Builder ATS -->
+          <div class="project-card" data-category="web ai">
+            <div>
+              <div class="project-badge-bar">
+                <span class="project-category">SaaS Web App</span>
+                <span class="project-status">🟢 Live Production</span>
+              </div>
+              <h3 class="project-title">CV Builder ATS-Friendly</h3>
+              <p class="project-description">
+                Generator CV modern dengan 14 template standar industri HRD (Harvard, Ahmad Jober, Baskara). Fitur auto-fill AI dari scan CV lama (Google Gemini), modal cropper foto 3:4, dynamic two-way data binding, dan export PDF A4 clean margin zero-blank page.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">React</span>
+                <span class="project-tag">html2pdf.js</span>
+                <span class="project-tag">react-easy-crop</span>
+                <span class="project-tag">Gemini AI</span>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <span style="font-size: 0.8rem; color: var(--text-muted);">lokerbrayy.anull.cloud</span>
+              <a href="https://lokerbrayy.anull.cloud/cv-builder" target="_blank" class="project-link">
+                Coba Buat CV ➔
+              </a>
+            </div>
+          </div>
+
+          <!-- 4. Anull Streaming TV -->
+          <div class="project-card" data-category="web media">
+            <div>
+              <div class="project-badge-bar">
+                <span class="project-category">Smart TV & Web</span>
+                <span class="project-status">🟢 Live Production</span>
+              </div>
+              <h3 class="project-title">Anull Streaming Film & TV APK</h3>
+              <p class="project-description">
+                Aplikasi streaming film bioskop multi-server untuk Web dan Smart TV Android. Dilengkapi sistem watchdog auto-failover 12 detik, remote D-Pad focus ring overlay 3.5px neon glow layer teratas, strict ad-blocking whitelist, dan keyboard TV interaktif.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">React Native</span>
+                <span class="project-tag">Expo SDK 54</span>
+                <span class="project-tag">Android TV</span>
+                <span class="project-tag">Next.js</span>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Web & Android APK</span>
+              <a href="https://anull-streaming.vercel.app/" target="_blank" class="project-link">
+                Buka Web Streaming ➔
+              </a>
+            </div>
+          </div>
+
+          <!-- 5. Bot Status WA HD -->
+          <div class="project-card" data-category="bot media">
+            <div>
+              <div class="project-badge-bar">
+                <span class="project-category">Video Processing</span>
+                <span class="project-status">🟢 Live VPS (PM2: 5)</span>
+              </div>
+              <h3 class="project-title">Bot Kompresor Video & Status WA HD</h3>
+              <p class="project-description">
+                Bot WhatsApp kompresi video FFmpeg dengan preset khusus: Status WA 1080p Tajam (.khususwa), Instagram Story 60 FPS Murni (.khususig) dengan color preservation BT.709 anti-pudar di Meta, dan pengiriman streaming URL zero buffer crash di RAM VPS.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">FFmpeg Core</span>
+                <span class="project-tag">Node.js</span>
+                <span class="project-tag">BT.709 Matrix</span>
+                <span class="project-tag">Baileys</span>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <span style="font-size: 0.8rem; color: var(--text-muted);">60 FPS Encoder</span>
+              <a href="https://wa.me/6281313656442" target="_blank" class="project-link">
+                Coba Kompres Video ➔
+              </a>
+            </div>
+          </div>
+
+          <!-- 6. Bot Saluran WA -->
+          <div class="project-card" data-category="bot">
+            <div>
+              <div class="project-badge-bar">
+                <span class="project-category">Web Scraping / Bot</span>
+                <span class="project-status">🟢 Live VPS (PM2: 1)</span>
+              </div>
+              <h3 class="project-title">Bot Forwarder Saluran WhatsApp</h3>
+              <p class="project-description">
+                Sistem agregator siaran Channel WhatsApp resmi berbasis Puppeteer Headless Chromium. Menangkap siaran info lowongan terpercaya lalu mem-forward otomatis ke seluruh grup Loker Bray dengan cache 24 jam anti-duplikasi.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Puppeteer</span>
+                <span class="project-tag">Chromium</span>
+                <span class="project-tag">whatsapp-web.js</span>
+                <span class="project-tag">Firebase</span>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Channel Forwarder</span>
+              <span class="project-link">Sistem Otomasi VPS</span>
+            </div>
+          </div>
+
+          <!-- 7. Document Merger -->
+          <div class="project-card" data-category="web">
+            <div>
+              <div class="project-badge-bar">
+                <span class="project-category">Document Tool</span>
+                <span class="project-status">🟢 Live Production</span>
+              </div>
+              <h3 class="project-title">Document Merger & Compressor PDF</h3>
+              <p class="project-description">
+                Aplikasi penggabung berkas lamaran kerja (KTP, Ijazah, CV, SKCK, Transkrip) 100% client-side via pdf-lib. Menjamin privasi dokumen tanpa upload ke server luar dengan drag & drop visual reordering dan kompresi output &lt;1MB (standar email HRD).
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">pdf-lib</span>
+                <span class="project-tag">pdfjs-dist</span>
+                <span class="project-tag">React</span>
+                <span class="project-tag">TailwindCSS</span>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <span style="font-size: 0.8rem; color: var(--text-muted);">lokerbrayy.anull.cloud</span>
+              <a href="https://lokerbrayy.anull.cloud/doc-merger" target="_blank" class="project-link">
+                Gabungkan Dokumen ➔
+              </a>
+            </div>
+          </div>
+
+          <!-- 8. QR Code Studio -->
+          <div class="project-card" data-category="web media">
+            <div>
+              <div class="project-badge-bar">
+                <span class="project-category">Graphic Engine</span>
+                <span class="project-status">🟢 Live Production</span>
+              </div>
+              <h3 class="project-title">QR Code Generator & Branded Studio</h3>
+              <p class="project-description">
+                Generator QR Code beresolusi ultra-tinggi (4000x4000px) dengan kustomisasi pola dots, frame sudut, warna gradasi, dan penyisipan logo perusahaan di tengah (Error Correction Level H) serta export format PNG & SVG vektor siap cetak kemasan.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Canvas 2D</span>
+                <span class="project-tag">qrcode.react</span>
+                <span class="project-tag">React</span>
+                <span class="project-tag">Vite</span>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <span style="font-size: 0.8rem; color: var(--text-muted);">qr.anull.cloud</span>
+              <a href="https://qr.anull.cloud/" target="_blank" class="project-link">
+                Generate QR HD ➔
+              </a>
+            </div>
+          </div>
+
+          <!-- 9. Test Brayy -->
+          <div class="project-card" data-category="web">
+            <div>
+              <div class="project-badge-bar">
+                <span class="project-category">Testing Platform</span>
+                <span class="project-status">🟢 Live Production</span>
+              </div>
+              <h3 class="project-title">Test Brayy - Platform Psikotes Karir</h3>
+              <p class="project-description">
+                Platform latihan simulasi psikotes industri kerja mencakup Tes Koran (Kraepelin / Pauli) berbatas waktu dinamis, tes kepribadian PAPI Kostick (20 dimensi kerja), dan tes matematika dasar pabrik lengkap dengan grafik kestabilan kerja real-time.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">React</span>
+                <span class="project-tag">Chart.js</span>
+                <span class="project-tag">TailwindCSS</span>
+                <span class="project-tag">Vite</span>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <span style="font-size: 0.8rem; color: var(--text-muted);">testbrayy.anull.cloud</span>
+              <a href="https://testbrayy.anull.cloud" target="_blank" class="project-link">
+                Mulai Tes Psikotes ➔
+              </a>
+            </div>
+          </div>
+
+          <!-- 10. Auto-Crop KTP -->
+          <div class="project-card" data-category="media">
+            <div>
+              <div class="project-badge-bar">
+                <span class="project-category">Computer Vision</span>
+                <span class="project-status">🟢 Live Production</span>
+              </div>
+              <h3 class="project-title">Auto-Crop KTP 1:1 Perspective</h3>
+              <p class="project-description">
+                Aplikasi pelurus foto e-KTP miring berbasis 4-Corner Homography Perspective Warping. Mengunci dimensi fisik e-KTP Indonesia (85.60 mm × 53.98 mm) secara presisi 1:1 pada lembar cetak A4 PDF.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Perspective.js</span>
+                <span class="project-tag">Canvas</span>
+                <span class="project-tag">React</span>
+                <span class="project-tag">TailwindCSS</span>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <span style="font-size: 0.8rem; color: var(--text-muted);">doc-cropping</span>
+              <span class="project-link">1:1 Physical Scale</span>
+            </div>
+          </div>
+
+          <!-- 11. Studio Pas Foto -->
+          <div class="project-card" data-category="media">
+            <div>
+              <div class="project-badge-bar">
+                <span class="project-category">Studio Printing</span>
+                <span class="project-status">🟢 Live Production</span>
+              </div>
+              <h3 class="project-title">Studio Cetak Pas Foto Otomatis</h3>
+              <p class="project-description">
+                Aplikasi studio pas foto otomatis dengan auto-grid packing lembar A4 (ukuran 2x3, 3x4, 4x6, 2R hingga 5R), fitur instan ganti background merah (#D32F2F) atau biru (#1976D2), serta export 300 DPI siap cetak printer studio.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">react-konva</span>
+                <span class="project-tag">Canvas</span>
+                <span class="project-tag">React</span>
+                <span class="project-tag">Vite</span>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <span style="font-size: 0.8rem; color: var(--text-muted);">cetak-foto-anul</span>
+              <span class="project-link">300 DPI Studio Output</span>
+            </div>
+          </div>
+
+          <!-- 12. Joki NPWP & Invoice -->
+          <div class="project-card" data-category="web">
+            <div>
+              <div class="project-badge-bar">
+                <span class="project-category">Fintech Utility</span>
+                <span class="project-status">🟢 Live Production</span>
+              </div>
+              <h3 class="project-title">Joki NPWP & Generator Invoice Nota</h3>
+              <p class="project-description">
+                Aplikasi validasi format nomor NPWP 15-16 digit dan generator invoice/nota pembayaran digital otomatis lengkap dengan tanggal transaksi, cap stempel digital, dan export dokumen PDF siap kirim klien.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">html2canvas</span>
+                <span class="project-tag">jsPDF</span>
+                <span class="project-tag">CSS3</span>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <span style="font-size: 0.8rem; color: var(--text-muted);">JokiNPWPAnul</span>
+              <span class="project-link">Digital Stamp Engine</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CREATIVE & MULTIMEDIA GALLERY (CLOUDINARY CDN POWERED)
+         ========================================================================== -->
+    <section id="creative" style="background: rgba(15, 23, 42, 0.3);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">Multimedia Showcase</div>
+          <h2 class="section-title">Galeri Desain & Karya Visual</h2>
+          <p class="section-subtitle">Portofolio desain banner promosi, fotografi, dan identitas visual yang disajikan cepat via Cloudinary CDN.</p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="filter-tabs">
+          <button class="filter-btn gallery-filter-btn active" data-filter="all">Semua Karya</button>
+          <button class="filter-btn gallery-filter-btn" data-filter="desain">Desain Banner</button>
+          <button class="filter-btn gallery-filter-btn" data-filter="foto">Fotografi</button>
+          <button class="filter-btn gallery-filter-btn" data-filter="branding">Name Tag & Kalender</button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid">
+          
+          <!-- 1. Banner Seblak -->
+          <div class="gallery-item" data-category="desain" data-title="Desain Banner Kuliner Seblak" data-full-img="https://res.cloudinary.com/s6fg76lj/image/upload/f_auto,q_auto/nullsanz-portfolio/portfolio/seblak">
+            <img src="https://res.cloudinary.com/s6fg76lj/image/upload/c_fill,w_400,h_300,f_auto,q_auto/nullsanz-portfolio/portfolio/seblak" alt="Desain Banner Seblak" class="gallery-thumb" loading="lazy" />
+            <div class="gallery-overlay">
+              <div class="gallery-item-title">Banner Seblak Prasmanan</div>
+              <div class="gallery-item-cat">Desain Promosi & Cetak</div>
+            </div>
+          </div>
+
+          <!-- 2. Banner Busana -->
+          <div class="gallery-item" data-category="desain" data-title="Desain Banner Butik Busana" data-full-img="https://res.cloudinary.com/s6fg76lj/image/upload/f_auto,q_auto/nullsanz-portfolio/portfolio/busana">
+            <img src="https://res.cloudinary.com/s6fg76lj/image/upload/c_fill,w_400,h_300,f_auto,q_auto/nullsanz-portfolio/portfolio/busana" alt="Desain Banner Busana" class="gallery-thumb" loading="lazy" />
+            <div class="gallery-overlay">
+              <div class="gallery-item-title">Banner Fashion & Busana</div>
+              <div class="gallery-item-cat">Desain Promosi & Cetak</div>
+            </div>
+          </div>
+
+          <!-- 3. Banner Ciken -->
+          <div class="gallery-item" data-category="desain" data-title="Desain Banner Fried Chicken" data-full-img="https://res.cloudinary.com/s6fg76lj/image/upload/f_auto,q_auto/nullsanz-portfolio/portfolio/ciken">
+            <img src="https://res.cloudinary.com/s6fg76lj/image/upload/c_fill,w_400,h_300,f_auto,q_auto/nullsanz-portfolio/portfolio/ciken" alt="Desain Banner Ciken" class="gallery-thumb" loading="lazy" />
+            <div class="gallery-overlay">
+              <div class="gallery-item-title">Banner Resto Fried Chicken</div>
+              <div class="gallery-item-cat">Desain Promosi & Cetak</div>
+            </div>
+          </div>
+
+          <!-- 4. Kalender Desain -->
+          <div class="gallery-item" data-category="branding" data-title="Desain Kalender Dinding Eksklusif" data-full-img="https://res.cloudinary.com/s6fg76lj/image/upload/f_auto,q_auto/nullsanz-portfolio/portfolio/kalender">
+            <img src="https://res.cloudinary.com/s6fg76lj/image/upload/c_fill,w_400,h_300,f_auto,q_auto/nullsanz-portfolio/portfolio/kalender" alt="Desain Kalender" class="gallery-thumb" loading="lazy" />
+            <div class="gallery-overlay">
+              <div class="gallery-item-title">Desain Layout Kalender</div>
+              <div class="gallery-item-cat">Percetakan & Branding</div>
+            </div>
+          </div>
+
+          <!-- 5. Banner Baklor -->
+          <div class="gallery-item" data-category="desain" data-title="Desain Banner Street Food Baklor" data-full-img="https://res.cloudinary.com/s6fg76lj/image/upload/f_auto,q_auto/nullsanz-portfolio/portfolio/baklor">
+            <img src="https://res.cloudinary.com/s6fg76lj/image/upload/c_fill,w_400,h_300,f_auto,q_auto/nullsanz-portfolio/portfolio/baklor" alt="Desain Banner Baklor" class="gallery-thumb" loading="lazy" />
+            <div class="gallery-overlay">
+              <div class="gallery-item-title">Banner Kuliner Baklor</div>
+              <div class="gallery-item-cat">Desain Promosi & Cetak</div>
+            </div>
+          </div>
+
+          <!-- 6. Banner Walimatussafar Haji -->
+          <div class="gallery-item" data-category="desain" data-title="Desain Banner Tasyakur Haji" data-full-img="https://res.cloudinary.com/s6fg76lj/image/upload/f_auto,q_auto/nullsanz-portfolio/portfolio/haji">
+            <img src="https://res.cloudinary.com/s6fg76lj/image/upload/c_fill,w_400,h_300,f_auto,q_auto/nullsanz-portfolio/portfolio/haji" alt="Banner Walimatussafar Haji" class="gallery-thumb" loading="lazy" />
+            <div class="gallery-overlay">
+              <div class="gallery-item-title">Banner Tasyakur Haji</div>
+              <div class="gallery-item-cat">Acara & Formalitas</div>
+            </div>
+          </div>
+
+          <!-- 7. Fotografi 1 -->
+          <div class="gallery-item" data-category="foto" data-title="Fotografi Portrait Studio #1" data-full-img="https://res.cloudinary.com/s6fg76lj/image/upload/f_auto,q_auto/nullsanz-portfolio/portfolio/ft1">
+            <img src="https://res.cloudinary.com/s6fg76lj/image/upload/c_fill,w_400,h_300,f_auto,q_auto/nullsanz-portfolio/portfolio/ft1" alt="Fotografi Portrait #1" class="gallery-thumb" loading="lazy" />
+            <div class="gallery-overlay">
+              <div class="gallery-item-title">Portrait Photography #1</div>
+              <div class="gallery-item-cat">Fotografi & Lighting</div>
+            </div>
+          </div>
+
+          <!-- 8. Fotografi 2 -->
+          <div class="gallery-item" data-category="foto" data-title="Fotografi Portrait Studio #2" data-full-img="https://res.cloudinary.com/s6fg76lj/image/upload/f_auto,q_auto/nullsanz-portfolio/portfolio/ft5">
+            <img src="https://res.cloudinary.com/s6fg76lj/image/upload/c_fill,w_400,h_300,f_auto,q_auto/nullsanz-portfolio/portfolio/ft5" alt="Fotografi Portrait #2" class="gallery-thumb" loading="lazy" />
+            <div class="gallery-overlay">
+              <div class="gallery-item-title">Portrait Photography #2</div>
+              <div class="gallery-item-cat">Fotografi & Lighting</div>
+            </div>
+          </div>
+
+          <!-- 9. Name Tag 1 -->
+          <div class="gallery-item" data-category="branding" data-title="Desain Name Tag Identitas Organisasi" data-full-img="https://res.cloudinary.com/s6fg76lj/image/upload/f_auto,q_auto/nullsanz-portfolio/portfolio/nt1">
+            <img src="https://res.cloudinary.com/s6fg76lj/image/upload/c_fill,w_400,h_300,f_auto,q_auto/nullsanz-portfolio/portfolio/nt1" alt="Desain Name Tag #1" class="gallery-thumb" loading="lazy" />
+            <div class="gallery-overlay">
+              <div class="gallery-item-title">Corporate Name Tag</div>
+              <div class="gallery-item-cat">Identitas Visual & Kartu</div>
+            </div>
+          </div>
+
+          <!-- 10. Name Tag 2 -->
+          <div class="gallery-item" data-category="branding" data-title="Desain ID Card Member" data-full-img="https://res.cloudinary.com/s6fg76lj/image/upload/f_auto,q_auto/nullsanz-portfolio/portfolio/nt2">
+            <img src="https://res.cloudinary.com/s6fg76lj/image/upload/c_fill,w_400,h_300,f_auto,q_auto/nullsanz-portfolio/portfolio/nt2" alt="Desain Name Tag #2" class="gallery-thumb" loading="lazy" />
+            <div class="gallery-overlay">
+              <div class="gallery-item-title">ID Card & Name Tag #2</div>
+              <div class="gallery-item-cat">Identitas Visual & Kartu</div>
+            </div>
+          </div>
+
+          <!-- 11. Fotografi 3 -->
+          <div class="gallery-item" data-category="foto" data-title="Fotografi Model & Fashion" data-full-img="https://res.cloudinary.com/s6fg76lj/image/upload/f_auto,q_auto/nullsanz-portfolio/portfolio/ft8">
+            <img src="https://res.cloudinary.com/s6fg76lj/image/upload/c_fill,w_400,h_300,f_auto,q_auto/nullsanz-portfolio/portfolio/ft8" alt="Fotografi Fashion" class="gallery-thumb" loading="lazy" />
+            <div class="gallery-overlay">
+              <div class="gallery-item-title">Fashion Photography</div>
+              <div class="gallery-item-cat">Fotografi & Komposisi</div>
+            </div>
+          </div>
+
+          <!-- 12. Fotografi 4 -->
+          <div class="gallery-item" data-category="foto" data-title="Fotografi Outdoor & Natural" data-full-img="https://res.cloudinary.com/s6fg76lj/image/upload/f_auto,q_auto/nullsanz-portfolio/portfolio/ft10">
+            <img src="https://res.cloudinary.com/s6fg76lj/image/upload/c_fill,w_400,h_300,f_auto,q_auto/nullsanz-portfolio/portfolio/ft10" alt="Fotografi Outdoor" class="gallery-thumb" loading="lazy" />
+            <div class="gallery-overlay">
+              <div class="gallery-item-title">Outdoor Portrait Photography</div>
+              <div class="gallery-item-cat">Fotografi & Natural Light</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CERTIFICATES & EXPERIENCE SECTION
+         ========================================================================== -->
+    <section id="certificates">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">Pengalaman & Bukti Resmi</div>
+          <h2 class="section-title">Sertifikasi & Rekam Jejak</h2>
+          <p class="section-subtitle">Klik sertifikat di bawah ini untuk melihat dokumen verifikasi resmi dalam resolusi penuh.</p>
+        </div>
+
+        <div class="cert-grid">
+          
+          <!-- Cert 1: PT Preshion Engplas -->
+          <div class="cert-card" data-cert-img="https://res.cloudinary.com/s6fg76lj/image/upload/f_auto,q_auto/nullsanz-portfolio/certificates/sertifikat">
+            <img src="https://res.cloudinary.com/s6fg76lj/image/upload/c_fill,w_300,h_220,f_auto,q_auto/nullsanz-portfolio/certificates/sertifikat" alt="Sertifikat PT Preshion Engplas" class="cert-preview-img" loading="lazy" />
+            <div class="cert-info">
+              <h4>PT. PRESHION ENGPLAS</h4>
+              <div class="cert-role">Praktik Kerja Lapangan (PKL) Industri</div>
+              <div class="cert-date">📅 Sep 2022 – Des 2022</div>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;">
+                Pengalaman kerja industri di bidang manufaktur plastik presisi, kedisiplinan 5R, dan alur kerja operasional pabrik.
+              </p>
+            </div>
+          </div>
+
+          <!-- Cert 2: OSIS TIT -->
+          <div class="cert-card" data-cert-img="https://res.cloudinary.com/s6fg76lj/image/upload/f_auto,q_auto/nullsanz-portfolio/certificates/sertifikat2">
+            <img src="https://res.cloudinary.com/s6fg76lj/image/upload/c_fill,w_300,h_220,f_auto,q_auto/nullsanz-portfolio/certificates/sertifikat2" alt="Sertifikat OSIS TIT" class="cert-preview-img" loading="lazy" />
+            <div class="cert-info">
+              <h4>OSIS SMKN 1 JATISARI</h4>
+              <div class="cert-role">Ketua Divisi Teknik Informasi Telekomunikasi (TIT)</div>
+              <div class="cert-date">📅 2022 – 2024 (2 Periode)</div>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;">
+                Memimpin pengelolaan infrastruktur IT, live broadcast acara sekolah, dokumentasi visual multimedia, dan manajemen tim.
+              </p>
+            </div>
+          </div>
+
+          <!-- Cert 3: Uji Kompetensi Bagian Depan -->
+          <div class="cert-card" data-cert-img="https://res.cloudinary.com/s6fg76lj/image/upload/f_auto,q_auto/nullsanz-portfolio/certificates/sertifikat3">
+            <img src="https://res.cloudinary.com/s6fg76lj/image/upload/c_fill,w_300,h_220,f_auto,q_auto/nullsanz-portfolio/certificates/sertifikat3" alt="Sertifikat UKK Depan" class="cert-preview-img" loading="lazy" />
+            <div class="cert-info">
+              <h4>Sertifikat Uji Kompetensi Keahlian (UKK)</h4>
+              <div class="cert-role">Kompetensi Multimedia & Broadcasting (Depan)</div>
+              <div class="cert-date">📅 Desember 2024</div>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;">
+                Sertifikasi standar kelayakan kejuruan mencakup desain grafis, editing audio visual, videografi, dan animasi.
+              </p>
+            </div>
+          </div>
+
+          <!-- Cert 4: Uji Kompetensi Bagian Belakang -->
+          <div class="cert-card" data-cert-img="https://res.cloudinary.com/s6fg76lj/image/upload/f_auto,q_auto/nullsanz-portfolio/certificates/sertifikat4">
+            <img src="https://res.cloudinary.com/s6fg76lj/image/upload/c_fill,w_300,h_220,f_auto,q_auto/nullsanz-portfolio/certificates/sertifikat4" alt="Sertifikat UKK Belakang" class="cert-preview-img" loading="lazy" />
+            <div class="cert-info">
+              <h4>Transkrip Nilai Kompetensi Kejuruan (UKK)</h4>
+              <div class="cert-role">Daftar Penilaian Praktik Industri (Belakang)</div>
+              <div class="cert-date">📅 Desember 2024</div>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;">
+                Lembar transkrip resmi rincian pencapaian nilai kompetensi teknis dari penguji asesor industri.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         INTERACTIVE TERMINAL PLAYGROUND (EASTER EGG)
+         ========================================================================== -->
+    <section id="terminal" style="background: rgba(15, 23, 42, 0.3);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">Developer Console</div>
+          <h2 class="section-title">Interactive Terminal Playground</h2>
+          <p class="section-subtitle">Ketik perintah di bawah untuk berinteraksi langsung dengan sistem data portofolio.</p>
+        </div>
+
+        <div class="terminal-wrapper">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="terminal-dot dot-red"></span>
+              <span class="terminal-dot dot-yellow"></span>
+              <span class="terminal-dot dot-green"></span>
+            </div>
+            <div class="terminal-title">nullsanz@terminal: ~ (bash)</div>
+            <div style="font-size: 0.75rem; color: var(--accent-emerald);">🟢 LIVE</div>
+          </div>
+          
+          <div class="terminal-body" id="terminal-output-body">
+            <div class="terminal-line" style="color: #94A3B8;">
+              Selamat datang di Terminal Portofolio Lukmanul Hakim (Nullsanz) v2.5.0<br />
+              Ketik <span style="color: var(--accent-cyan); font-weight: bold;">'help'</span> dan tekan [Enter] untuk melihat daftar perintah yang tersedia.
+            </div>
+          </div>
+
+          <div style="padding: 10px 20px 16px 20px; background: #0D1117;">
+            <div class="terminal-input-row">
+              <span class="terminal-prompt">visitor@nullsanz:~$</span>
+              <input type="text" id="terminal-cli-input" class="terminal-input" placeholder="ketik perintah di sini (contoh: help, skills, projects, contact)..." autocomplete="off" spellcheck="false" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CONTACT SECTION
+         ========================================================================== -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">Mari Berkolaborasi</div>
+          <h2 class="section-title">Hubungi Saya</h2>
+          <p class="section-subtitle">Terbuka untuk peluang kerja full-time, freelance, pengembangan sistem bot, atau konsultasi arsitektur software.</p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Contact Details -->
+          <div class="contact-info-card">
+            <h3 style="font-size: 1.35rem; color: var(--text-primary);">Informasi Kontak Resmi</h3>
+            <p>
+              Jangan ragu untuk menyapa melalui WhatsApp, email, atau jaringan profesional saya di LinkedIn. Saya merespons pesan dengan cepat.
+            </p>
+
+            <div class="contact-item">
+              <div class="contact-icon">📱</div>
+              <div>
+                <div style="font-size: 0.8rem; color: var(--text-muted);">Nomor WhatsApp Utama</div>
+                <a href="https://wa.me/6285718532060" target="_blank" style="font-weight: 700; color: #34D399; font-size: 1.05rem;">
+                  +62 857-1853-2060
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">✉️</div>
+              <div>
+                <div style="font-size: 0.8rem; color: var(--text-muted);">Alamat Email Resmi</div>
+                <a href="mailto:tsanlikar701@gmail.com" style="font-weight: 700; color: #60A5FA; font-size: 1.05rem;">
+                  tsanlikar701@gmail.com
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">📍</div>
+              <div>
+                <div style="font-size: 0.8rem; color: var(--text-muted);">Domisili / Lokasi</div>
+                <div style="font-weight: 700; color: var(--text-primary);">
+                  Karawang, Jawa Barat, Indonesia
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top: 10px;">
+              <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 8px;">Jaringan Sosial Media:</div>
+              <div class="social-strip">
+                <a href="https://www.linkedin.com/in/lukmanul-hakim-586658309" target="_blank" class="social-btn" title="LinkedIn Profile">
+                  <span style="font-weight: bold;">in</span>
+                </a>
+                <a href="https://github.com/nullsanz" target="_blank" class="social-btn" title="GitHub Profile">
+                  <span style="font-weight: bold;">gh</span>
+                </a>
+                <a href="https://www.instagram.com/nullsanzz" target="_blank" class="social-btn" title="Instagram Profile">
+                  <span style="font-weight: bold;">ig</span>
+                </a>
+                <a href="https://www.facebook.com/anul.cekep" target="_blank" class="social-btn" title="Facebook Profile">
+                  <span style="font-weight: bold;">fb</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Action Card -->
+          <div class="contact-info-card" style="justify-content: center; text-align: center; align-items: center;">
+            <div style="width: 72px; height: 72px; border-radius: 50%; background: rgba(59, 130, 246, 0.15); display: flex; align-items: center; justify-content: center; font-size: 2.2rem; margin-bottom: 12px;">
+              💬
+            </div>
+            <h3 style="font-size: 1.5rem; color: var(--text-primary);">Siap Mulai Berbicara?</h3>
+            <p style="max-width: 420px; margin-bottom: 24px;">
+              Kirimkan pesan langsung ke WhatsApp untuk mendiskusikan peluang proyek, rekrutmen perusahaan, atau tanya jawab teknis.
+            </p>
+            <a href="https://wa.me/6285718532060?text=Halo%20Lukman,%20saya%20tertarik%20dengan%20portofolio%20Anda" target="_blank" class="btn btn-primary" style="padding: 14px 32px; font-size: 1.05rem;">
+              <span>💬</span> Kirim Pesan WhatsApp Sekarang
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       SITE FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 <b>Lukmanul Hakim (Nullsanz)</b>. Seluruh hak cipta dilindungi undang-undang.</p>
+      <p style="font-size: 0.775rem; margin-top: 6px; color: var(--text-muted);">
+        Dibangun dengan Standar Web Modern • Media di-hosting di Cloudinary Global CDN
+      </p>
     </div>
+  </footer>
 
-    <script data-cfasync="false" src="../../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/jquery.min.js"></script>
-    <script src="js/modernizr.custom.js"></script>
-    <script src="js/animating.js"></script>
+  <!-- ==========================================================================
+       MODAL LIGHTBOX
+       ========================================================================== -->
+  <div class="modal-lightbox" id="gallery-lightbox">
+    <div class="modal-container">
+      <button class="modal-close-btn" id="lightbox-close">✕</button>
+      <img src="" alt="Pratinjau Karya" id="lightbox-img" class="modal-img" />
+      <div class="modal-caption" id="lightbox-caption">Judul Karya</div>
+    </div>
+  </div>
 
-    <script src="js/imagesloaded.pkgd.min.js"></script>
-    <script src='../../../../../www.google.com/recaptcha/api.js'></script>
-
-    <script src='js/isotope.pkgd.min.js'></script>
-    <script src='js/owl.carousel.min.js'></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-
-    <script src="js/validator.js"></script>
-    <script src="js/main.js"></script>
-  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon='{"rayId":"73fbe4f22ea589bc","version":"2022.8.0","r":1,"token":"94b99c0576dc45bf9d669fb5e9256829","si":100}' crossorigin="anonymous"></script>
+  <!-- Scripts -->
+  <script src="js/app.js"></script>
 </body>
-
-<!-- Mirrored from lmpixels.com/demo/cvup/dark/2/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Aug 2022 11:55:09 GMT -->
 </html>
