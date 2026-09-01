@@ -18,17 +18,26 @@ document.addEventListener('DOMContentLoaded', () => {
 function initNav() {
   const burgerBtn = document.getElementById('menuBurgerBtn');
   const drawer = document.getElementById('mobileDrawer');
-  const navLinks = document.querySelectorAll('.mobile-drawer a, .nav-item-link');
+  const navLinks = document.querySelectorAll('#mobileDrawer a, .nav-item-link');
 
   if (burgerBtn && drawer) {
     burgerBtn.addEventListener('click', () => {
-      drawer.classList.toggle('open');
-      burgerBtn.textContent = drawer.classList.contains('open') ? '✕' : '☰';
+      const isHidden = drawer.classList.contains('hidden');
+      if (isHidden) {
+        drawer.classList.remove('hidden');
+        drawer.classList.add('flex');
+        burgerBtn.textContent = '✕';
+      } else {
+        drawer.classList.add('hidden');
+        drawer.classList.remove('flex');
+        burgerBtn.textContent = '☰';
+      }
     });
 
     navLinks.forEach(link => {
       link.addEventListener('click', () => {
-        drawer.classList.remove('open');
+        drawer.classList.add('hidden');
+        drawer.classList.remove('flex');
         if (burgerBtn) burgerBtn.textContent = '☰';
       });
     });
