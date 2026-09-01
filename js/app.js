@@ -131,7 +131,7 @@ function initProjectFilters() {
   });
 }
 
-/* 5. Multimedia Filters */
+/* 5. Multimedia Filters (Pinterest Masonry Friendly) */
 function initMediaFilters() {
   const filterBtns = document.querySelectorAll('.media-filter-btn');
   const mediaItems = document.querySelectorAll('.media-gallery-item');
@@ -150,8 +150,7 @@ function initMediaFilters() {
       mediaItems.forEach(item => {
         const cat = item.getAttribute('data-category');
         if (filterVal === 'all' || cat === filterVal) {
-          item.style.display = 'flex';
-          item.style.flexDirection = 'column';
+          item.style.display = 'block';
         } else {
           item.style.display = 'none';
         }
@@ -160,37 +159,109 @@ function initMediaFilters() {
   });
 }
 
-/* 6. Lightbox Modal */
+/* 6. Lightbox Modal (Ultra Responsive + Prev/Next + Keyboard) */
 function initLightbox() {
   const lightbox = document.getElementById('nbLightbox');
   const lbImg = document.getElementById('nbLightboxImg');
   const lbCap = document.getElementById('nbLightboxCap');
   const lbClose = document.getElementById('nbLightboxClose');
-  const triggerElements = document.querySelectorAll('[data-lightbox-src]');
+  const lbPrev = document.getElementById('nbLightboxPrev');
+  const lbNext = document.getElementById('nbLightboxNext');
 
-  triggerElements.forEach(el => {
-    el.addEventListener('click', () => {
-      const src = el.getAttribute('data-lightbox-src');
-      const title = el.getAttribute('data-lightbox-title') || 'Karya Multimedia';
-      if (lightbox && lbImg && lbCap) {
-        lbImg.src = src;
-        lbCap.textContent = title;
-        lightbox.classList.add('active');
-      }
+  let currentGallery = [];
+  let currentIndex = 0;
+
+  function updateGalleryItems() {
+    currentGallery = Array.from(document.querySelectorAll('[data-lightbox-src]')).filter(el => {
+      return el.offsetParent !== null || window.getComputedStyle(el).display !== 'none';
     });
+  }
+
+  function openLightbox(index) {
+    if (index < 0 || index >= currentGallery.length) return;
+    currentIndex = index;
+    const target = currentGallery[currentIndex];
+    const src = target.getAttribute('data-lightbox-src');
+    const title = target.getAttribute('data-lightbox-title') || 'Karya Multimedia';
+
+    if (lightbox && lbImg && lbCap) {
+      lbImg.src = src;
+      lbCap.textContent = title;
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  document.addEventListener('click', (e) => {
+    const trigger = e.target.closest('[data-lightbox-src]');
+    if (trigger) {
+      updateGalleryItems();
+      const idx = currentGallery.indexOf(trigger);
+      if (idx !== -1) {
+        openLightbox(idx);
+      } else {
+        const src = trigger.getAttribute('data-lightbox-src');
+        const title = trigger.getAttribute('data-lightbox-title') || 'Karya Multimedia';
+        if (lightbox && lbImg && lbCap) {
+          lbImg.src = src;
+          lbCap.textContent = title;
+          lightbox.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        }
+      }
+    }
   });
 
-  if (lbClose && lightbox) {
-    lbClose.addEventListener('click', () => {
+  function closeLightbox() {
+    if (lightbox) {
       lightbox.classList.remove('active');
-    });
+      document.body.style.overflow = '';
+      if (lbImg) lbImg.src = '';
+    }
+  }
 
-    lightbox.addEventListener('click', (e) => {
-      if (e.target === lightbox) {
-        lightbox.classList.remove('active');
+  if (lbClose) lbClose.addEventListener('click', closeLightbox);
+
+  if (lbPrev) {
+    lbPrev.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (currentGallery.length > 0) {
+        currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+        openLightbox(currentIndex);
       }
     });
   }
+
+  if (lbNext) {
+    lbNext.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (currentGallery.length > 0) {
+        currentIndex = (currentIndex + 1) % currentGallery.length;
+        openLightbox(currentIndex);
+      }
+    });
+  }
+
+  if (lightbox) {
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        closeLightbox();
+      }
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (!lightbox || !lightbox.classList.contains('active')) return;
+    if (e.key === 'Escape') {
+      closeLightbox();
+    } else if (e.key === 'ArrowLeft' && currentGallery.length > 0) {
+      currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+      openLightbox(currentIndex);
+    } else if (e.key === 'ArrowRight' && currentGallery.length > 0) {
+      currentIndex = (currentIndex + 1) % currentGallery.length;
+      openLightbox(currentIndex);
+    }
+  });
 }
 
 /* 7. Neo-Brutalism Terminal */
@@ -203,8 +274,8 @@ function initTerminal() {
     help: `Daftar perintah yang tersedia:
   - <span style="color:#FFE66D">about</span>    : Ringkasan profil Lukmanul Hakim
   - <span style="color:#FFE66D">skills</span>   : Matriks keahlian & stack teknologi
-  - <span style="color:#FFE66D">projects</span> : Ekosistem 17+ software & bot WhatsApp
-  - <span style="color:#FFE66D">media</span>    : Koleksi 43 karya multimedia & video
+  - <span style="color:#FFE66D">projects</span> : Ekosistem 8 software & bot WhatsApp unggulan
+  - <span style="color:#FFE66D">media</span>    : Koleksi 43 karya multimedia & video (Pinterest layout)
   - <span style="color:#FFE66D">vps</span>      : Status server VPS 103.169.207.132
   - <span style="color:#FFE66D">contact</span>  : Hubungi langsung via WhatsApp / Email
   - <span style="color:#FFE66D">clear</span>    : Bersihkan layar terminal`,
@@ -219,13 +290,15 @@ function initTerminal() {
 • Cloud/DB : Linux VPS (PM2), Firebase RTDB, Vercel, Cloudinary CDN.
 • AI/Intel : Google Gemini 1.5 Pro, Truecaller + GetContact Scraping.`,
 
-    projects: `🚀 <b>Top 6 Production Projects:</b>
-1. [Bot WA] Loker Bray v2.0 (Gemini AI + Dual Phone Intelligence)
+    projects: `🚀 <b>8 Unggulan Production Projects:</b>
+1. [Bot WA & Saluran] Loker Bray v2.0 (Gemini AI + Dual Phone Intelligence + Saluran Forwarder)
 2. [Platform] Shortlink Studio link.anull.cloud (Custom Slug & Cute Redirect)
-3. [SaaS] CV Builder ATS (14 Templates + AI Auto-Fill)
+3. [SaaS] CV Builder ATS-Friendly (14 Templates + AI Auto-Fill)
 4. [App] Anull Streaming Smart TV (Expo TV APK & D-Pad Remote)
-5. [Video] Bot Status WA HD (FFmpeg 60 FPS BT.709 Color Space)
-6. [Utility] Document Merger PDF (100% Client-Side pdf-lib)`,
+5. [Video Suite] Video Compressor (VPS Bot + Windows EXE + Android APK)
+6. [Utility] Document Merger PDF (100% Client-Side pdf-lib)
+7. [Studio] QR Code Generator (4000px Ultra HD, Custom Pattern, Logo Branding)
+8. [Testing] Test Brayy (Simulasi Psikotes Kraepelin, PAPI Kostick & Matematika)`,
 
     media: `🎬 <b>Multimedia Portfolio:</b>
 • 16 Videografi (2 YouTube Landscape + 14 Google Drive Shorts)
