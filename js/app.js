@@ -151,6 +151,7 @@ function initMediaFilters() {
         const cat = item.getAttribute('data-category');
         if (filterVal === 'all' || cat === filterVal) {
           item.style.display = 'flex';
+          item.style.flexDirection = 'column';
         } else {
           item.style.display = 'none';
         }
